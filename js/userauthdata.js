@@ -15,17 +15,17 @@ const firestore = firebase.firestore();
 
 
 firestore.collection('client').get().then((responce) => {
-    var totaluseremail ;
-     
+    var totaluseremail;
+
     responce.forEach(doc => {
         const docId = doc.id
-   
-      
-        
+
+
+
         const docData = doc.data();
-   
-       
-        
+
+
+
 
         const userId = document.createElement('div');
         userId.className = "userContainer";
@@ -57,7 +57,7 @@ firestore.collection('client').get().then((responce) => {
         mainusercontainer.appendChild(userId);
 
         totaluseremail = mainusercontainer.children.length;
-        
+
 
 
 
@@ -66,10 +66,10 @@ firestore.collection('client').get().then((responce) => {
 
 
     })
-   
-const useremail = document.getElementsByClassName('totaluseremail')[0];
-useremail.innerText = totaluseremail;
-localStorage.setItem('emailuser',totaluseremail)
+
+    const useremail = document.getElementsByClassName('totaluseremail')[0];
+    useremail.innerText = totaluseremail;
+    localStorage.setItem('emailuser', totaluseremail)
 
 })
 
@@ -116,55 +116,107 @@ firestore.collection('gmailClient').get().then((responce) => {
         const mainusercontainer1 = document.getElementsByClassName('users-gmailclient')[0];
         mainusercontainer1.appendChild(usergmail);
 
- totalgmailuser = mainusercontainer1.children.length;
+        totalgmailuser = mainusercontainer1.children.length;
 
 
 
     })
 
     const useremail = document.getElementsByClassName('totalusergmail')[0];
-useremail.innerText = totalgmailuser;
-var totaluser = 0;
-totaluser =parseInt(totalgmailuser) + parseInt(localStorage.getItem('emailuser'));
- const usertotal = document.getElementsByClassName('totaluser')[0];
- usertotal.innerText = totaluser;
+    useremail.innerText = totalgmailuser;
+    var totaluser = 0;
+    totaluser = parseInt(totalgmailuser) + parseInt(localStorage.getItem('emailuser'));
+    const usertotal = document.getElementsByClassName('totaluser')[0];
+    usertotal.innerText = totaluser;
 })
 
 
 const db = firebase.database();
 
 db.ref('userorder').get('value').then((snap) => {
-  const userOrder = snap.val();
-  const ConvertUserData = Object.entries(userOrder)
+    const userOrder = snap.val();
+    const ConvertUserData = Object.entries(userOrder)
 
-  
-var orderCount = 0
-  ConvertUserData.forEach((userdata, index) => {
-    const userid = userdata[0];
-    console.log(userid);
-    
-    
-    const userdet = userdata[1]
-    console.log(userdet);
-    
-    const userOrderItems = Object.entries(userdet)
 
-  orderCount = orderCount + userOrderItems.length
-   const ordertotal = document.getElementsByClassName('ordertotal')[0];
- ordertotal.innerText = orderCount;
-    
-    
-    
-    
-    
-    
-    
-    
-  })
-  
-  
-    
+    var orderCount = 0
+    ConvertUserData.forEach((userdata, index) => {
+        const userid = userdata[0];
+
+
+        const userdet = userdata[1]
+
+        const userOrderItems = Object.entries(userdet)
+
+        orderCount = orderCount + userOrderItems.length
+        const ordertotal = document.getElementsByClassName('ordertotal')[0];
+        ordertotal.innerText = orderCount;
+        var todayOrder = 0;
+        userOrderItems.forEach((items) => {
+            const pushData = items;
+            const pushDataid = pushData[0]
+            const pushOrderData = pushData[1]
+
+
+
+
+
+            const arraydata = [pushOrderData];
+
+
+
+
+            const exist = arraydata.filter((data, index) => data.date === new Date().toLocaleDateString())
+
+            exist.forEach((datas, index) => {
+                const divison = document.createElement('div');
+                divison.className = "newfile"
+                divison.innerHTML = datas.username;
+
+                const todaycount = document.getElementsByClassName('mahan')[0]
+                todaycount.append(divison)
+                const newfile = document.getElementsByClassName('newfile')
+              
+
+
+                todayOrder = todayOrder + newfile.length
+               
+
+
+                const ordertotaltoday = document.getElementsByClassName('ordertoday')[0];
+                ordertotaltoday.innerText = todayOrder;
+
+            })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        })
+
+
+
+
+
+
+
+
+    })
+
+
+
 }).catch((err) => {
     console.log(err);
-    
+
 });
