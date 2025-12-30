@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --primary-color: #198754;
+    font-family: "Inter", sans-serif;
+}
+
+
+
+
+
+@media only screen and (min-width:200px) and (max-width:399px) {
+
+    .totaldetailscontainer {
+        height: 350px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ecf0f1;
+    }
+
+    .totalcontaiener {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        width: 90%;
+        background-color: #fff;
+    }
+
+    .totalcontaiener h6 {
+        color: #ff9900;
+        padding: 10px;
+        background-color: #ff9900;
+        color: #fff;
+        text-align: center;
+
+    }
+
+    .arrange {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 10px 10px;
+    }
+
+    span {
+        font-weight: 600;
+        color: #198754;
+    }
+
+    .first-container-header {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        font-weight: 600;
+        background-color: #ff9900;
+        color: #ecf0f1;
+    }
+
+    .client {
+        background-color: #ecf0f1;
+        height: auto;
+        width: 100%;
+        background-color: #ecf0f1;
+        padding: 20px 0;
+    }
+
+    .client-name {
+        display: none;
+    }
+
+    .usermenu {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1),
+            -1px -1px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+    }
+
+    .users-emailclient,
+    .users-gmailclient {
+        width: 90%;
+        margin: auto;
+        padding: 10px 20px;
+    }
+
+    .users {
+        margin-top: 10px;
+    }
+
+    .height {
+        height: 100px;
+        background-color: #ecf0f1;
+    }
+}
+
+
+
+
+
+/* lg mobiles */
+@media only screen and (min-width:400px) and (max-width:767px) {
+
+    .totaldetailscontainer {
+        height: 350px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ecf0f1;
+    }
+
+    .totalcontaiener {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        width: 90%;
+        background-color: #fff;
+    }
+
+    .totalcontaiener h6 {
+        color: #ff9900;
+        padding: 10px;
+        background-color: #ff9900;
+        color: #fff;
+        text-align: center;
+
+    }
+
+    .arrange {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 10px 10px;
+    }
+
+    span {
+        font-weight: 600;
+        color: #198754;
+    }
+
+    .first-container-header {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        font-weight: 600;
+        background-color: #ff9900;
+        color: #ecf0f1;
+    }
+
+    .client {
+        background-color: #ecf0f1;
+        height: auto;
+        width: 100%;
+        background-color: #ecf0f1;
+        padding: 20px 0;
+    }
+
+    .client-name {
+        display: none;
+    }
+
+    .usermenu {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1),
+            -1px -1px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+    }
+
+    .users-emailclient,
+    .users-gmailclient {
+        width: 90%;
+        margin: auto;
+        padding: 10px 20px;
+    }
+
+    .users {
+        margin-top: 10px;
+    }
+
+    .height {
+        height: 100px;
+        background-color: #ecf0f1;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+/*  tablets */
+@media only screen and (min-width:768px) and (max-width:1023px) {
+
+    .totaldetailscontainer {
+        height: 350px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ecf0f1;
+    }
+
+    .totalcontaiener {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        width: 90%;
+        background-color: #fff;
+    }
+
+    .totalcontaiener h6 {
+        color: #ff9900;
+        padding: 10px;
+        background-color: #ff9900;
+        color: #fff;
+        text-align: center;
+
+    }
+
+    .arrange {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 10px 10px;
+    }
+
+    span {
+        font-weight: 600;
+        color: #198754;
+    }
+
+    .first-container-header {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        font-weight: 600;
+        background-color: #ff9900;
+        color: #ecf0f1;
+    }
+
+    .client {
+        background-color: #ecf0f1;
+        height: auto;
+        width: 100%;
+        background-color: #ecf0f1;
+        padding: 20px 0;
+    }
+
+    .client-name {
+        display: none;
+    }
+
+    .usermenu {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1),
+            -1px -1px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+    }
+
+    .users-emailclient,
+    .users-gmailclient {
+        width: 80%;
+        margin: auto;
+        padding: 10px 20px;
+    }
+
+    .users {
+        margin-top: 10px;
+    }
+
+    .height {
+        height: 100px;
+        background-color: #ecf0f1;
+    }
+}
+
+
+
+
+/*  laptops */
+@media only screen and (min-width:1024px) and (max-width:1439px) {}
+
+
+
+/*  desktops*/
+@media only screen and (min-width:1440px) and (max-width:2159px) {
+    .today-order-tit {
+        font-size: 17px;
+        padding: 10px;
+    }
+
+    .order-items-today {
+        background-color: #ecf0f1;
+        height: auto;
+        padding: 10px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 95%;
+        padding: 10px;
+        margin: auto;
+
+    }
+
+
+    thead {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: #ff9900;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    tr {
+        display: flex;
+        outline: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 10px 10px;
+        gap: 50px;
+    }
+
+
+    .tr {
+        display: flex;
+        width: 100%;
+        background-color: #fff;
+        margin-top: 10px;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1),
+            -1px -1px 2px rgba(0, 0, 0, 0.1);
+        font-weight: 600;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+    td:nth-child(3),
+    td:nth-child(6),
+    td:nth-child(5),
+    td:nth-child(4),
+    td:nth-child(2),
+    td:nth-child(7),
+    td:nth-child(8) {
+        width: 150px;
+    }
+
+    td:nth-child(1) {
+        width: 0px;
+    }
+
+    th:nth-child(3),
+    th:nth-child(6),
+    th:nth-child(5),
+    th:nth-child(4),
+    th:nth-child(2),
+    th:nth-child(7),
+    th:nth-child(8) {
+        width: 150px;
+    }
+
+    th:nth-child(1) {
+        width: 0px;
+    }
+
+    .totalContainer {
+        margin-top: 10px;
+        background-color: #fff;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1),
+            -1px -1px 2px rgba(0, 0, 0, 0.1);
+        font-weight: 600;
+        border-radius: 2px;
+    }
+
+}
