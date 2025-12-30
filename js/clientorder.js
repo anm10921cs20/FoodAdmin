@@ -29,7 +29,8 @@ db.ref('userorder').get('value').then((snapchat) => {
         todayOrder(todaypro, index)
 
     })
-    todayArray.forEach((items, index) => {
+    const dateSort = todayArray.reverse()
+    dateSort.forEach((items, index) => {
         oldOrder(items, index)
     })
 
