@@ -123,6 +123,8 @@
     .admin-main-container {
         background-color: #ff9900;
         padding: 10px;
+        position: sticky;
+        top: 0;
     }
 
     .main-container-header-img img {
