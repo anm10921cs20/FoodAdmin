@@ -230,7 +230,17 @@ function todayOrder(todaypro, index, uniqArray) {
 
                 ` ;
         offCanavs.appendChild(addfoodContainer);
-        offCanavs.style.width = "100%"
+        const displayWidth = innerWidth;
+        
+        if(displayWidth >= 1024)
+        {
+            offCanavs.style.width = "30%"
+        }
+        if(displayWidth <= 1023)
+        {
+            offCanavs.style.width = "100%"
+        }
+        
         offCanavs.style.overflowY = "scroll";
 
 
@@ -471,8 +481,19 @@ function oldOrder(items, index, uid) {
 
                 ` ;
         offCanavs.appendChild(addfoodContainer);
-        offCanavs.style.width = "100%"
+         const displayWidth = innerWidth;
+        
+        if(displayWidth >= 1024)
+        {
+            offCanavs.style.width = "30%"
+        }
+        if(displayWidth <= 1023)
+        {
+            offCanavs.style.width = "100%"
+        }
+        
         offCanavs.style.overflowY = "scroll";
+        offCanavs.style.scrollBehavior ="smooth"
 
 
 
