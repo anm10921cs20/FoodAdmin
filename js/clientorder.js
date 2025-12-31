@@ -4,7 +4,7 @@ db.ref('userorder').get('value').then((snapchat) => {
     const userOrder = snapchat.val();
     const ConvertUserData = Object.entries(userOrder)
     const todayArray = []
-    const todayUid = []
+    const uniqArray = []
     ConvertUserData.forEach((userdata, index) => {
         const userid = userdata[0];
 
@@ -16,9 +16,10 @@ db.ref('userorder').get('value').then((snapchat) => {
             const pushDataid = pushData[0]
             const pushOrderData = pushData[1]
             
+
             
 
-            addOrder(pushOrderData, todayArray, pushDataid, todayUid)
+            addOrder(pushOrderData, todayArray, pushDataid, uniqArray)
 
 
 
@@ -27,14 +28,17 @@ db.ref('userorder').get('value').then((snapchat) => {
         })
     })
 
-    const dateFilter = todayArray.filter((today, index) => today.date === new Date().toLocaleDateString())
+    const dateFilter = todayArray.filter((today, index) => today.date === new Date().toLocaleDateString());
+    const idFilter = uniqArray.filter((today, index) => today.date === new Date().toLocaleDateString());
+    console.log(idFilter);
+    
     dateFilter.forEach((todaypro, index) => {
-        todayOrder(todaypro, index, todayUid)
+        todayOrder(todaypro, index, idFilter )
 
     })
     const dateSort = todayArray.reverse()
     dateSort.forEach((items, index) => {
-        oldOrder(items, index, todayUid)
+        oldOrder(items, index)
     })
 
 
@@ -49,10 +53,12 @@ db.ref('userorder').get('value').then((snapchat) => {
 });
 
 // add order
-function addOrder(pushOrderData, todayArray, pushDataid, todayUid) {
+function addOrder(pushOrderData, todayArray, pushDataid, uniqArray) {
     const todayOrder = pushOrderData;
-    todayArray.push(todayOrder)
-    todayUid.push(pushDataid);
+    const uniqid = pushDataid
+    todayArray.push(todayOrder);
+    uniqArray.push(uniqid);
+    
     
 
 
@@ -60,7 +66,7 @@ function addOrder(pushOrderData, todayArray, pushDataid, todayUid) {
 
 // add items today
 
-function todayOrder(todaypro, index) {
+function todayOrder(todaypro, index, uniqArray) {
     const tr = document.createElement('tbody');
     const todayTime = todaypro.time;
     const zeroAdd = (data) => {
@@ -74,8 +80,11 @@ function todayOrder(todaypro, index) {
     const normalTime = zeroAdd(hours === 0 ? 12 : hours > 12 ? hours - 12 : hours);
 
     const median = hours < 12 ? "AM" : "PM"
-
-
+    const uniqvalue = Object.entries(uniqArray)
+    console.log(uniqvalue[index]);
+    console.log(todaypro[index]);
+    
+    
 
 
 
@@ -516,24 +525,12 @@ function oldOrder(items, index, uid) {
              <div class="order-status-text">Order Process
             <i class="fa-solid fa-stopwatch"></i>
              </div>
-             <div class="radio">
-             <input type="checkbox" class="deliverycompletes" name="checkbox" > Click To Delivery Success
-             <div>
              `;
         divIsOrderStatus.style.color = "#e24141ff"
         offCanavs.appendChild(divIsOrderStatus)
 
 
-        const deliveryCompleteElement = document.querySelectorAll('.deliverycompletes');
-        
-        
-        deliveryCompleteElement.forEach((value, index) => {
-            value.addEventListener('click', () => {
-                ClickToDeliverd(uid, index, items)
-                
-            })
-            
-        })
+    
         
             
 
@@ -571,17 +568,4 @@ function oldOrder(items, index, uid) {
 
 
 
-function ClickToDeliverd(uid, index, items)
-{
-    console.log(uid[index]);
-    
-    db.ref('userorder/' + items.username + items.useruid + "/" + uid[1]).get('value').then((snapchat) => {
-        console.log(snapchat.val());
-        
-    }).catch((err) => {
-        console.log(err);
-        
-    })
-    
-    
-}
+
