@@ -137,7 +137,7 @@ db.ref('userorder').get('value').then((snap) => {
         orderCount = orderCount + userOrderItems.length
         const ordertotal = document.getElementsByClassName('ordertotal')[0];
         ordertotal.innerText = orderCount;
-        var todayOrder = 0;
+        var todayOrder = localStorage.getItem('todayordercount') ?? 0;
         userOrderItems.forEach((items) => {
             const pushData = items;
             const pushDataid = pushData[0]
@@ -147,32 +147,17 @@ db.ref('userorder').get('value').then((snap) => {
 
 
 
-            const arraydata = [pushOrderData];
+           
 
 
 
 
-            const exist = arraydata.filter((data, index) => data.date === new Date().toLocaleDateString())
-
-            exist.forEach((datas, index) => {
-                const divison = document.createElement('div');
-                divison.className = "newfile"
-                divison.innerHTML = datas.username;
-
-                const todaycount = document.getElementsByClassName('mahan')[0]
-                todaycount.append(divison)
-                const newfile = document.getElementsByClassName('newfile')
-              
-
-
-                todayOrder = todayOrder + newfile.length
-               
 
 
                 const ordertotaltoday = document.getElementsByClassName('ordertoday')[0];
                 ordertotaltoday.innerText = todayOrder;
 
-            })
+          
 
 
 

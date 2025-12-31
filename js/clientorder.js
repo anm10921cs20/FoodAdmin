@@ -14,12 +14,13 @@ db.ref('userorder').get('value').then((snapchat) => {
         userOrderItems.forEach((itemsget) => {
             const pushData = itemsget;
             const pushDataid = pushData[0]
+
             const pushOrderData = pushData[1]
-            
 
-            
 
-            addOrder(pushOrderData, todayArray, pushDataid, uniqArray)
+
+
+            addOrder(pushOrderData, todayArray, pushData, uniqArray)
 
 
 
@@ -29,11 +30,18 @@ db.ref('userorder').get('value').then((snapchat) => {
     })
 
     const dateFilter = todayArray.filter((today, index) => today.date === new Date().toLocaleDateString());
-    const idFilter = uniqArray.filter((today, index) => today.date === new Date().toLocaleDateString());
-    console.log(idFilter);
-    
+
+
+
+
+
+
+
+
+
+
     dateFilter.forEach((todaypro, index) => {
-        todayOrder(todaypro, index, idFilter )
+        todayOrder(todaypro, index, uniqArray)
 
     })
     const dateSort = todayArray.reverse()
@@ -45,21 +53,19 @@ db.ref('userorder').get('value').then((snapchat) => {
 
 
 
-
-
 }).catch((err) => {
     console.log(err);
 
 });
 
 // add order
-function addOrder(pushOrderData, todayArray, pushDataid, uniqArray) {
+function addOrder(pushOrderData, todayArray, pushData, uniqArray) {
     const todayOrder = pushOrderData;
-    const uniqid = pushDataid
+
     todayArray.push(todayOrder);
-    uniqArray.push(uniqid);
-    
-    
+    uniqArray.push(pushData);
+
+
 
 
 }
@@ -80,11 +86,11 @@ function todayOrder(todaypro, index, uniqArray) {
     const normalTime = zeroAdd(hours === 0 ? 12 : hours > 12 ? hours - 12 : hours);
 
     const median = hours < 12 ? "AM" : "PM"
-    const uniqvalue = Object.entries(uniqArray)
-    console.log(uniqvalue[index]);
-    console.log(todaypro[index]);
-    
-    
+
+   
+   
+
+
 
 
 
@@ -104,10 +110,10 @@ function todayOrder(todaypro, index, uniqArray) {
  <div class="orderitem-header">
             <div class="orderiddata">
                 <div class="orderuniqid">
-                    UserUid #${todaypro.useruid}
+                    UserUid #<span>${todaypro.useruid}</span>
                 </div>
                 <div class="item-count">
-                ${todaypro.username} | ${todaypro.food.length} Items, Rs.${todaypro.total.ToPay}
+                <span>${todaypro.username}</span> | ${todaypro.food.length} Items, Rs.${todaypro.total.ToPay}
                 </div>
             </div>
             <div class="close-icon">
@@ -188,6 +194,8 @@ function todayOrder(todaypro, index, uniqArray) {
 
 
 
+
+
     const todayItems = document.getElementsByClassName('today-items')[0];
     todayItems.appendChild(tr)
 
@@ -230,6 +238,9 @@ function todayOrder(todaypro, index, uniqArray) {
 
 
 
+
+
+
     })
 
     if (todaypro.isOrderStatus == false) {
@@ -239,12 +250,11 @@ function todayOrder(todaypro, index, uniqArray) {
              <div class="order-status-text">Order Process
             <i class="fa-solid fa-stopwatch"></i>
              </div>
-             <div class="radio">
-             <input type="checkbox" class="deliverycomplete" name="checkbox" onchange="update()" > Click To Delivery Success
-             <div>
              `;
         divIsOrderStatus.style.color = "#e24141ff"
         offCanavs.appendChild(divIsOrderStatus)
+
+
     }
     else {
         const divIsOrderStatus = document.createElement('div');
@@ -259,10 +269,6 @@ function todayOrder(todaypro, index, uniqArray) {
     }
 
 
-    function update() {
-        console.log('hii');
-
-    }
 
 
 
@@ -277,6 +283,7 @@ function todayOrder(todaypro, index, uniqArray) {
     const total = document.getElementById('todaycount')
     var todayTotalOrder = todayItems.children.length;
     total.innerText = todayTotalOrder;
+    localStorage.setItem('todayordercount',todayTotalOrder)
 
     var totalValue = 0;
     const totalAmtElement = document.querySelectorAll('.totalamt');
@@ -475,7 +482,7 @@ function oldOrder(items, index, uid) {
     })
 
 
- 
+
 
 
 
@@ -518,7 +525,7 @@ function oldOrder(items, index, uid) {
     totalitem.innerText = "Rs." + totalValue
 
 
-   if (items.isOrderStatus == false) {
+    if (items.isOrderStatus == false) {
         const divIsOrderStatus = document.createElement('div');
         divIsOrderStatus.className = "isorder-status";
         divIsOrderStatus.innerHTML = `
@@ -530,11 +537,11 @@ function oldOrder(items, index, uid) {
         offCanavs.appendChild(divIsOrderStatus)
 
 
-    
-        
-            
 
-       
+
+
+
+
     }
     else {
         const divIsOrderStatus = document.createElement('div');
