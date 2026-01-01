@@ -1,6 +1,6 @@
 // firebase
 
-const firebaseConfig = {
+const firebaseConfig1 = {
     apiKey: "AIzaSyAm--sfbEonD49xNHSWPWoeMbkwFXXqF4U",
     authDomain: "mahan-food-app.firebaseapp.com",
     databaseURL: "https://mahan-food-app-default-rtdb.firebaseio.com",
@@ -11,7 +11,7 @@ const firebaseConfig = {
     measurementId: "G-V1EX1JKP7S"
 };
 
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig1);
 
 const firestore = firebase.firestore();
 const db = firebase.database();

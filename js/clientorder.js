@@ -87,8 +87,8 @@ function todayOrder(todaypro, index, uniqArray) {
 
     const median = hours < 12 ? "AM" : "PM"
 
-   
-   
+
+
 
 
 
@@ -231,16 +231,14 @@ function todayOrder(todaypro, index, uniqArray) {
                 ` ;
         offCanavs.appendChild(addfoodContainer);
         const displayWidth = innerWidth;
-        
-        if(displayWidth >= 1024)
-        {
+
+        if (displayWidth >= 1024) {
             offCanavs.style.width = "30%"
         }
-        if(displayWidth <= 1023)
-        {
+        if (displayWidth <= 1023) {
             offCanavs.style.width = "100%"
         }
-        
+
         offCanavs.style.overflowY = "scroll";
 
 
@@ -269,8 +267,27 @@ function todayOrder(todaypro, index, uniqArray) {
     else {
         const divIsOrderStatus = document.createElement('div');
         divIsOrderStatus.className = "isorder-status";
+        function zeroAdd(data) {
+            return data < 9 ? `0${data}` : data;
+        }
+        const orderTime1 = todaypro.deliveryTime;
+
+
+
+
+
+        const convertNormalTimeElement = parseInt(orderTime1.slice(0, 2));
+
+
+        const hours = zeroAdd(convertNormalTimeElement === 0 ? 12 : convertNormalTimeElement > 12 ? convertNormalTimeElement - 12 : convertNormalTimeElement);
+        const minutes = zeroAdd(parseInt(orderTime1.slice(3, 5)));
+
+
+
+        const second = zeroAdd(parseInt(orderTime1.slice(6, 8)))
+        const median = convertNormalTimeElement < 12 ? "AM" : "PM";
         divIsOrderStatus.innerHTML = `
-             <div class="order-status-text">Order Delivered
+             <div class="order-status-text">Order Delivered ${hours}:${minutes}:${second} ${median}
              <i class="fa-solid fa-circle-check"></i></i>
              </div>
              `;
@@ -293,7 +310,7 @@ function todayOrder(todaypro, index, uniqArray) {
     const total = document.getElementById('todaycount')
     var todayTotalOrder = todayItems.children.length;
     total.innerText = todayTotalOrder;
-    localStorage.setItem('todayordercount',todayTotalOrder)
+    localStorage.setItem('todayordercount', todayTotalOrder)
 
     var totalValue = 0;
     const totalAmtElement = document.querySelectorAll('.totalamt');
@@ -481,19 +498,17 @@ function oldOrder(items, index, uid) {
 
                 ` ;
         offCanavs.appendChild(addfoodContainer);
-         const displayWidth = innerWidth;
-        
-        if(displayWidth >= 1024)
-        {
+        const displayWidth = innerWidth;
+
+        if (displayWidth >= 1024) {
             offCanavs.style.width = "30%"
         }
-        if(displayWidth <= 1023)
-        {
+        if (displayWidth <= 1023) {
             offCanavs.style.width = "100%"
         }
-        
+
         offCanavs.style.overflowY = "scroll";
-        offCanavs.style.scrollBehavior ="smooth"
+        offCanavs.style.scrollBehavior = "smooth"
 
 
 

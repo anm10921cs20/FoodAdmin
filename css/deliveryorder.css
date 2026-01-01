@@ -8,107 +8,88 @@
 
 
 
+
+
 @media only screen and (min-width:200px) and (max-width:399px) {
-     body {
+    body {
+
         width: 100%;
     }
 
-    .admin-main-container {
-        background-color: #ff9900;
+    .deliveryordertit {
         padding: 10px;
-        width: 100%;
-        position: sticky;
-        top: 0;
-        left: 0;
+        font-size: 20px;
+        font-weight: 600;
     }
 
-    .main-container-header-img img {
-        width: 40px;
-        border-radius: 50%;
-
-    }
-    .main-container-header
-    {
-        display: flex;
-        justify-content: space-between;
-        padding: 0 10px;
-        color: #fff;
-        align-items: center;
-        width: 100%;
-    }
-    .main-container-header-img
-    {
-        display: flex;
-        gap: 10px;
-    }
-    .fa-circle-user,.fa-bars,.fa-close
-    {
-        font-size: 25px;
-    }
-    .pc-data
-    {
-        display: none;
-    }
-    .admin-id
-    {
-        display: flex;
-        gap: 14px;
-        margin-bottom: 7px;
-    }
-    .nav-header
-    {
-        color: #fff;
-        height: 50px;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-    }
-    .main-container-header-img p
-    {
-        text-shadow: 1px 2px 2px #000;
-    }
-
-    .main-container-header-img p {
-        text-align: center;
-    }
-
-    .userimg img {
-        width: 20px;
-    }
-
-    .nav-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: #ff9900;
-        height: 100%;
-        width: 100%;
-        margin-left: -500px;
-        transition: margin-left 1s ;
-    }
-    .nav-container-active
-    {
-        margin-left: 0;
-        transition: margin-left 1s ;
-    }
-
-
-    .nav-menu {
-        list-style-type: none;
-        color: #ecf0f1;
-        padding: 10px;
-        margin-top: 10px;
-    }
-
-    .nav-menu li {
-        margin: 20px 0;
+    .today-delivery-order,
+    .today-delivered-order {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
         background-color: #ecf0f1;
-        padding: 10px;
+    }
+
+    .order-item-today {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 40px;
+        height: auto;
+        width: 100%;
+        margin: auto;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+        border-radius: 4px;
+        font-size: 8px;
+        font-weight: 700;
+    }
+
+    .today-order {
+        padding: 0 20px;
+    }
+
+    .orderstatus {
         color: #ff4343;
     }
 
-}
+    .button-container {
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+    }
 
+    button {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        font-weight: 500;
+        font-size: 9px;
+    }
+
+    button:hover {
+        background-color: #ff9900;
+        color: #fff;
+
+
+    }
+
+    .order-det {
+        width: 100%;
+    }
+
+    .user-det {
+        width: 100%;
+    }
+
+    .user-cont,
+    .user-cont1 {
+        width: 100%;
+    }
+
+    .height {
+        height: 100px;
+    }
+
+}
 
 
 
@@ -117,98 +98,81 @@
 @media only screen and (min-width:400px) and (max-width:767px) {
 
     body {
+
         width: 100%;
     }
 
-    .admin-main-container {
-        background-color: #ff9900;
+    .deliveryordertit {
         padding: 10px;
-        position: sticky;
-        top: 0;
+        font-size: 20px;
+        font-weight: 600;
     }
 
-    .main-container-header-img img {
-        width: 40px;
-        border-radius: 50%;
-
+    .today-delivery-order,
+    .today-delivered-order {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        background-color: #ecf0f1;
     }
-    .main-container-header
-    {
+
+    .order-item-today {
         display: flex;
-        justify-content: space-between;
-        padding: 0 10px;
-        color: #fff;
-        align-items: center;
+        flex-direction: column;
+        padding: 20px 40px;
+        height: auto;
+        gap: 30px;
+        width: 100%;
+        margin: auto;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+        border-radius: 4px;
+        font-size: 8px;
+        font-weight: 700;
     }
-    .main-container-header-img
-    {
+
+    .today-order {
+        padding: 0 20px;
+    }
+
+    .orderstatus {
+        color: #ff4343;
+    }
+
+    .button-container {
+        margin-top: 10px;
         display: flex;
         gap: 10px;
     }
-    .fa-circle-user,.fa-bars,.fa-close
-    {
-        font-size: 25px;
-    }
-    .pc-data
-    {
-        display: none;
-    }
-    .admin-id
-    {
-        display: flex;
-        gap: 14px;
-        margin-bottom: 7px;
-    }
-    .nav-header
-    {
-        color: #fff;
-        height: 50px;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-    }
-    .main-container-header-img p
-    {
-        text-shadow: 1px 2px 2px #000;
+
+    button {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        font-weight: 500;
+        font-size: 9px;
     }
 
-    .main-container-header-img p {
-        text-align: center;
-    }
-
-    .userimg img {
-        width: 20px;
-    }
-
-    .nav-container {
-        position: fixed;
-        top: 0;
-        left: 0;
+    button:hover {
         background-color: #ff9900;
-        height: 100vh;
+        color: #fff;
+
+
+    }
+
+    .order-det {
         width: 100%;
-        margin-left: -500px;
-        transition: margin-left 1s ;
-    }
-    .nav-container-active
-    {
-        margin-left: 0;
-        transition: margin-left 1s ;
     }
 
-
-    .nav-menu {
-        list-style-type: none;
-        color: #ecf0f1;
-        padding: 10px;
-        margin-top: 10px;
+    .user-det {
+        width: 100%;
     }
 
-    .nav-menu li {
-        margin: 20px 0;
-        background-color: #ecf0f1;
-        padding: 10px;
-        color: #ff4343;
+    .user-cont,
+    .user-cont1 {
+        width: 100%;
+    }
+
+    .height {
+        height: 100px;
     }
 
 
@@ -223,6 +187,8 @@
 
 
 }
+
+
 
 
 
@@ -232,98 +198,86 @@
 
 /*  tablets */
 @media only screen and (min-width:768px) and (max-width:1023px) {
-     body {
+    
+    body {
+
         width: 100%;
     }
 
-    .admin-main-container {
-        background-color: #ff9900;
+    .deliveryordertit {
         padding: 10px;
+        font-size: 20px;
+        font-weight: 600;
     }
 
-    .main-container-header-img img {
-        width: 40px;
-        border-radius: 50%;
-
+    .today-delivery-order,
+    .today-delivered-order {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        background-color: #ecf0f1;
     }
-    .main-container-header
-    {
+
+    .order-item-today {
         display: flex;
         justify-content: space-between;
-        padding: 0 10px;
-        color: #fff;
         align-items: center;
+        padding: 20px 40px;
+        height: 100px;
+        width: 100%;
+        margin: auto;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+        border-radius: 4px;
+        font-size: 8px;
+        font-weight: 700;
     }
-    .main-container-header-img
-    {
+
+    .today-order {
+        padding: 0 20px;
+    }
+
+    .orderstatus {
+        color: #ff4343;
+    }
+
+    .button-container {
+        margin-top: 10px;
         display: flex;
         gap: 10px;
     }
-    .fa-circle-user,.fa-bars,.fa-close
-    {
-        font-size: 25px;
-    }
-    .pc-data
-    {
-        display: none;
-    }
-    .admin-id
-    {
-        display: flex;
-        gap: 14px;
-        margin-bottom: 7px;
-    }
-    .nav-header
-    {
-        color: #fff;
-        height: 50px;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-    }
-    .main-container-header-img p
-    {
-        text-shadow: 1px 2px 2px #000;
+
+    button {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        font-weight: 500;
+        font-size: 9px;
     }
 
-    .main-container-header-img p {
-        text-align: center;
-    }
-
-    .userimg img {
-        width: 20px;
-    }
-
-    .nav-container {
-        position: fixed;
-        top: 0;
-        left: 0;
+    button:hover {
         background-color: #ff9900;
-        height: 100vh;
-        width: 100%;
-        margin-left: -850px;
-        transition: margin-left 1s ;
+        color: #fff;
+
+
     }
-    .nav-container-active
-    {
-        margin-left: 0;
-        transition: margin-left 1s ;
+
+    .order-det {
+        width: 33%;
+    }
+
+    .user-det {
+        width: 37%;
+    }
+
+    .user-cont,
+    .user-cont1 {
+        width: 30%;
+    }
+
+    .height {
+        height: 100px;
     }
 
 
-    .nav-menu {
-        list-style-type: none;
-        color: #ecf0f1;
-        padding: 10px;
-        margin-top: 10px;
-    }
-
-    .nav-menu li {
-        margin: 20px 0;
-        background-color: #ecf0f1;
-        padding: 10px;
-        color: #ff4343;
-    }
 
 }
 
@@ -335,83 +289,83 @@
 
 
     body {
-        outline: none;
-        user-select: none;
-    }
-    .mobile-data {
-        display: none;
-    }
 
-    .admin-main-container {
-        position: sticky;
         width: 100%;
-        top: 0;
-        background-color: #ff9900;
-        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
-    .main-container-header {
-        display: flex;
-        height: 50px;
-        align-items: center;
-        justify-content: space-evenly;
+    .deliveryordertit {
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 600;
     }
 
-    .main-container-header-img img {
-        width: 45px;
-        object-fit: cover;
-        border-radius: 50%;
-    }
-
-    .main-container-header-img {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        align-items: center;
-        color: aliceblue;
-        text-shadow: 1px 1px 1px #000;
-        font-size: 18px;
-    }
-
-    .nav-menu {
-        display: flex;
-        gap: 50px;
-        height: 50px;
-        list-style-type: none;
-        align-items: center;
-        margin-top: 10px;
-        color: azure;
-
-    }
-
-
-    .nav-menu li:hover {
-        cursor: pointer;
-        color: #ff4343;
-        transition: all 0.5s;
-    }
-
-    .admin-id {
-        padding: 5px 10px;
-        background-color: #fff;
-        border-radius: 3px;
-        color: #ff4343;
-    }
-
-    .admin-id:hover {
-        background-color: #ff4343;
-        color: #fff;
-        transition: all 0.3s;
-        cursor: pointer;
-    }
-
-    .first-container-header {
-        text-align: center;
+    .today-delivery-order,
+    .today-delivered-order {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
         padding: 10px 0;
-        font-size: 23px;
-        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: #ecf0f1;
     }
+
+    .order-item-today {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        height: 100px;
+        width: 100%;
+        margin: auto;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+        border-radius: 4px;
+        font-size: 10px;
+        font-weight: 700;
+    }
+
+    .today-order {
+        padding: 0 20px;
+    }
+
+    .orderstatus {
+        color: #ff4343;
+    }
+
+    .button-container {
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+    }
+
+    button {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    button:hover {
+        background-color: #ff9900;
+        color: #fff;
+
+
+    }
+
+    .order-det {
+        width: 33%;
+    }
+
+    .user-det {
+        width: 37%;
+    }
+
+    .user-cont,
+    .user-cont1 {
+        width: 30%;
+    }
+
+    .height {
+        height: 100px;
+    }
+
 
 }
 
@@ -420,18 +374,85 @@
 /*  desktops*/
 @media only screen and (min-width:1440px) and (max-width:2159px) {
     body {
-        outline: none;
-        user-select: none;
+
         width: 100%;
     }
-   .deliveryordertit
-   {
-    padding:10px;
-    font-size: 20px;
-    font-weight: 600;
-   }
 
-   
+    .deliveryordertit {
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .today-delivery-order,
+    .today-delivered-order {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        background-color: #ecf0f1;
+    }
+
+    .order-item-today {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        height: 100px;
+        width: 80%;
+        margin: auto;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .today-order {
+        padding: 0 20px;
+    }
+
+    .orderstatus {
+        color: #ff4343;
+    }
+
+    .button-container {
+        margin-top: 10px;
+        display: flex;
+        gap: 20px;
+    }
+
+    button {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    button:hover {
+        background-color: #ff9900;
+        color: #fff;
+
+
+    }
+
+    .order-det {
+        width: 33%;
+    }
+
+    .user-det {
+        width: 34%;
+    }
+
+    .user-cont,
+    .user-cont1 {
+        width: 20%;
+    }
+
+    .height {
+        height: 100px;
+    }
+
+
+
 
 
 }
