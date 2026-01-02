@@ -26,7 +26,7 @@ const deliveryOrder = document.getElementsByTagName('li')[2]
 const clientOrder = document.getElementsByTagName('li')[3]
 
 client.addEventListener('click', () => {
-    window.location.href = "./index.html";
+    window.location.href = "./client.html";
 })
 
 delviery.addEventListener('click', () => {

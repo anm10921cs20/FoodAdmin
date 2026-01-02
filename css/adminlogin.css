@@ -1,0 +1,1170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    font-family: "Inter", sans-serif;
+}
+
+* {
+    outline: none;
+    user-select: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+@media only screen and (min-width:200px) and (max-width:399px) {
+     .main-login-container {
+        background-image: url('https://img.freepik.com/free-photo/black-friday-sales-sign-neon-light_23-2151833076.jpg?t=st=1767330041~exp=1767333641~hmac=e9320b46db591ec2c01c6028b6583e3682771c6641e80febb721c1ab00f97881&w=1480');
+        height: 100vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+
+
+    .login-container {
+
+        height: 400px;
+        width: 400px;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.13);
+        border-radius: 4px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(2.6px);
+        -webkit-backdrop-filter: blur(2.6px);
+        border: 1px solid rgba(255, 255, 255, 0.24);
+    }
+
+    .top-content {
+        display: flex;
+        height: 160px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .img-logo {
+        border-radius: 50%;
+        width: 70px;
+    }
+
+    .admintext {
+        font-size: 19px;
+        color: #fff;
+    }
+
+    .admincontent {
+        font-size: 12px;
+        color: #ecf0f1;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-name,
+    .form-password {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.13);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(1.6px);
+        -webkit-backdrop-filter: blur(1.6px);
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding: 4px 10px;
+        width: 80%;
+        margin: auto;
+        border-radius: 4px;
+
+    }
+
+    .name-icon {
+        color: #fff;
+        font-size: 14px;
+    }
+
+    input {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 14px;
+
+    }
+    input:focus
+    {
+        background-color: transparent;
+    }
+
+    ::placeholder {
+        color: #fff;
+    }
+
+    .submit {
+        width: 100%;
+        width: 80%;
+        margin: auto auto;
+        background-color: var(--bs-primary);
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+    }
+
+    button {
+        width: 100%;
+        background-color: transparent;
+        border: transparent;
+        outline: none;
+        padding: 3px 0;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    .owner {
+        text-align: center;
+        color: #ecf0f1;
+    }
+
+    .submit:hover {
+        background-color: dodgerblue;
+        transition: all 0.5s;
+    }
+
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 300px;
+        height: 100px;
+        color: black;
+    }
+
+    .Toast {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.13);
+        border-radius: 2px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(1.6px);
+        -webkit-backdrop-filter: blur(1.6px);
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        position: relative;
+        padding: 10px;
+        color: #fff;
+        display: grid;
+        grid-template-columns: 60px 3fr 30px;
+        align-content: center;
+        --color:#0abf30;
+        background-image: linear-gradient(to right,#0abf3055, rgba(255, 255, 255, 0) 30% );
+        animation: show 0.3s ease 1 forwards;
+    }
+    .Toast i
+    {
+        color:var(--color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+    }
+    .Toast span,.Toast i:nth-child(3)
+    {
+    color:#fff;
+    opacity: 0.5;
+    }
+    .Toast .title
+    {
+        font-size: large;
+        font-weight: 600;
+        color: #fff;
+    }
+    @keyframes show{
+        0%
+        {
+            transform: translateX(100%
+            );
+        }
+        40%
+        {
+            transform: translateX(-5%);
+        }
+        80%
+        {
+            transform: translateX(0%);
+        }
+        100%
+        {
+            transform: translateX(-10%);
+        }
+    }
+    .Toast::before
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--color);
+        width: 100%;
+        height: 3px;
+        content: '';
+        box-shadow: 0 0 10px var(--color);
+        animation: timeOut 5s linear 1 forwards;
+    }
+
+    @keyframes timeOut{
+        to
+        {
+            width: 0;
+        }
+    }
+    .error
+    {
+        --color: #f24d4c;
+        background-image: linear-gradient(to right, #d44a4aad, rgba(255, 255, 255, 0) 30%);
+    }
+
+
+
+
+
+
+
+
+}
+
+@media only screen and (min-width:400px) and (max-width:767px) {
+     .main-login-container {
+        background-image: url('https://img.freepik.com/free-photo/black-friday-sales-sign-neon-light_23-2151833076.jpg?t=st=1767330041~exp=1767333641~hmac=e9320b46db591ec2c01c6028b6583e3682771c6641e80febb721c1ab00f97881&w=1480');
+        height: 100vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+
+
+    .login-container {
+
+        height: 400px;
+        width: 400px;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.13);
+        border-radius: 4px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(2.6px);
+        -webkit-backdrop-filter: blur(2.6px);
+        border: 1px solid rgba(255, 255, 255, 0.24);
+    }
+
+    .top-content {
+        display: flex;
+        height: 160px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .img-logo {
+        border-radius: 50%;
+        width: 70px;
+    }
+
+    .admintext {
+        font-size: 19px;
+        color: #fff;
+    }
+
+    .admincontent {
+        font-size: 12px;
+        color: #ecf0f1;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-name,
+    .form-password {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.13);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(1.6px);
+        -webkit-backdrop-filter: blur(1.6px);
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding: 4px 10px;
+        width: 80%;
+        margin: auto;
+        border-radius: 4px;
+
+    }
+
+    .name-icon {
+        color: #fff;
+        font-size: 14px;
+    }
+
+    input {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 14px;
+
+    }
+    input:focus
+    {
+        background-color: transparent;
+    }
+
+    ::placeholder {
+        color: #fff;
+    }
+
+    .submit {
+        width: 100%;
+        width: 80%;
+        margin: auto auto;
+        background-color: var(--bs-primary);
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+    }
+
+    button {
+        width: 100%;
+        background-color: transparent;
+        border: transparent;
+        outline: none;
+        padding: 3px 0;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    .owner {
+        text-align: center;
+        color: #ecf0f1;
+    }
+
+    .submit:hover {
+        background-color: dodgerblue;
+        transition: all 0.5s;
+    }
+
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 300px;
+        height: 100px;
+        color: black;
+    }
+
+    .Toast {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.13);
+        border-radius: 2px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(1.6px);
+        -webkit-backdrop-filter: blur(1.6px);
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        position: relative;
+        padding: 10px;
+        color: #fff;
+        display: grid;
+        grid-template-columns: 60px 3fr 30px;
+        align-content: center;
+        --color:#0abf30;
+        background-image: linear-gradient(to right,#0abf3055, rgba(255, 255, 255, 0) 30% );
+        animation: show 0.3s ease 1 forwards;
+    }
+    .Toast i
+    {
+        color:var(--color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+    }
+    .Toast span,.Toast i:nth-child(3)
+    {
+    color:#fff;
+    opacity: 0.5;
+    }
+    .Toast .title
+    {
+        font-size: large;
+        font-weight: 600;
+        color: #fff;
+    }
+    @keyframes show{
+        0%
+        {
+            transform: translateX(100%
+            );
+        }
+        40%
+        {
+            transform: translateX(-5%);
+        }
+        80%
+        {
+            transform: translateX(0%);
+        }
+        100%
+        {
+            transform: translateX(-10%);
+        }
+    }
+    .Toast::before
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--color);
+        width: 100%;
+        height: 3px;
+        content: '';
+        box-shadow: 0 0 10px var(--color);
+        animation: timeOut 5s linear 1 forwards;
+    }
+
+    @keyframes timeOut{
+        to
+        {
+            width: 0;
+        }
+    }
+    .error
+    {
+        --color: #f24d4c;
+        background-image: linear-gradient(to right, #d44a4aad, rgba(255, 255, 255, 0) 30%);
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/*  tablets */
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    .main-login-container {
+        background-image: url('https://img.freepik.com/free-photo/black-friday-sales-sign-neon-light_23-2151833076.jpg?t=st=1767330041~exp=1767333641~hmac=e9320b46db591ec2c01c6028b6583e3682771c6641e80febb721c1ab00f97881&w=1480');
+        height: 100vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+
+
+    .login-container {
+
+        height: 400px;
+        width: 400px;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.13);
+        border-radius: 4px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(2.6px);
+        -webkit-backdrop-filter: blur(2.6px);
+        border: 1px solid rgba(255, 255, 255, 0.24);
+    }
+
+    .top-content {
+        display: flex;
+        height: 160px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .img-logo {
+        border-radius: 50%;
+        width: 70px;
+    }
+
+    .admintext {
+        font-size: 19px;
+        color: #fff;
+    }
+
+    .admincontent {
+        font-size: 12px;
+        color: #ecf0f1;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-name,
+    .form-password {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.13);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(1.6px);
+        -webkit-backdrop-filter: blur(1.6px);
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding: 4px 10px;
+        width: 80%;
+        margin: auto;
+        border-radius: 4px;
+
+    }
+
+    .name-icon {
+        color: #fff;
+        font-size: 14px;
+    }
+
+    input {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 14px;
+
+    }
+    input:focus
+    {
+        background-color: transparent;
+    }
+
+    ::placeholder {
+        color: #fff;
+    }
+
+    .submit {
+        width: 100%;
+        width: 80%;
+        margin: auto auto;
+        background-color: var(--bs-primary);
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+    }
+
+    button {
+        width: 100%;
+        background-color: transparent;
+        border: transparent;
+        outline: none;
+        padding: 3px 0;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    .owner {
+        text-align: center;
+        color: #ecf0f1;
+    }
+
+    .submit:hover {
+        background-color: dodgerblue;
+        transition: all 0.5s;
+    }
+
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 300px;
+        height: 100px;
+        color: black;
+    }
+
+    .Toast {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.13);
+        border-radius: 2px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(1.6px);
+        -webkit-backdrop-filter: blur(1.6px);
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        position: relative;
+        padding: 10px;
+        color: #fff;
+        display: grid;
+        grid-template-columns: 60px 3fr 30px;
+        align-content: center;
+        --color:#0abf30;
+        background-image: linear-gradient(to right,#0abf3055, rgba(255, 255, 255, 0) 30% );
+        animation: show 0.3s ease 1 forwards;
+    }
+    .Toast i
+    {
+        color:var(--color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+    }
+    .Toast span,.Toast i:nth-child(3)
+    {
+    color:#fff;
+    opacity: 0.5;
+    }
+    .Toast .title
+    {
+        font-size: large;
+        font-weight: 600;
+        color: #fff;
+    }
+    @keyframes show{
+        0%
+        {
+            transform: translateX(100%
+            );
+        }
+        40%
+        {
+            transform: translateX(-5%);
+        }
+        80%
+        {
+            transform: translateX(0%);
+        }
+        100%
+        {
+            transform: translateX(-10%);
+        }
+    }
+    .Toast::before
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--color);
+        width: 100%;
+        height: 3px;
+        content: '';
+        box-shadow: 0 0 10px var(--color);
+        animation: timeOut 5s linear 1 forwards;
+    }
+
+    @keyframes timeOut{
+        to
+        {
+            width: 0;
+        }
+    }
+    .error
+    {
+        --color: #f24d4c;
+        background-image: linear-gradient(to right, #d44a4aad, rgba(255, 255, 255, 0) 30%);
+    }
+
+
+
+
+
+}
+
+
+
+
+/*  laptops */
+@media only screen and (min-width:1024px) and (max-width:1439px) {
+
+ .main-login-container {
+        background-image: url('https://img.freepik.com/free-photo/black-friday-sales-sign-neon-light_23-2151833076.jpg?t=st=1767330041~exp=1767333641~hmac=e9320b46db591ec2c01c6028b6583e3682771c6641e80febb721c1ab00f97881&w=1480');
+        height: 100vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+
+
+    .login-container {
+
+        height: 400px;
+        width: 400px;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.13);
+        border-radius: 4px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(2.6px);
+        -webkit-backdrop-filter: blur(2.6px);
+        border: 1px solid rgba(255, 255, 255, 0.24);
+    }
+
+    .top-content {
+        display: flex;
+        height: 160px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .img-logo {
+        border-radius: 50%;
+        width: 70px;
+    }
+
+    .admintext {
+        font-size: 19px;
+        color: #fff;
+    }
+
+    .admincontent {
+        font-size: 12px;
+        color: #ecf0f1;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-name,
+    .form-password {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.13);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(1.6px);
+        -webkit-backdrop-filter: blur(1.6px);
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding: 4px 10px;
+        width: 80%;
+        margin: auto;
+        border-radius: 4px;
+
+    }
+
+    .name-icon {
+        color: #fff;
+        font-size: 14px;
+    }
+
+    input {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 14px;
+
+    }
+    input:focus
+    {
+        background-color: transparent;
+    }
+
+    ::placeholder {
+        color: #fff;
+    }
+
+    .submit {
+        width: 100%;
+        width: 80%;
+        margin: auto auto;
+        background-color: var(--bs-primary);
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+    }
+
+    button {
+        width: 100%;
+        background-color: transparent;
+        border: transparent;
+        outline: none;
+        padding: 3px 0;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    .owner {
+        text-align: center;
+        color: #ecf0f1;
+    }
+
+    .submit:hover {
+        background-color: dodgerblue;
+        transition: all 0.5s;
+    }
+
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 300px;
+        height: 100px;
+        color: black;
+    }
+
+    .Toast {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.13);
+        border-radius: 2px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(1.6px);
+        -webkit-backdrop-filter: blur(1.6px);
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        position: relative;
+        padding: 10px;
+        color: #fff;
+        display: grid;
+        grid-template-columns: 60px 3fr 30px;
+        align-content: center;
+        --color:#0abf30;
+        background-image: linear-gradient(to right,#0abf3055, rgba(255, 255, 255, 0) 30% );
+        animation: show 0.3s ease 1 forwards;
+    }
+    .Toast i
+    {
+        color:var(--color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+    }
+    .Toast span,.Toast i:nth-child(3)
+    {
+    color:#fff;
+    opacity: 0.5;
+    }
+    .Toast .title
+    {
+        font-size: large;
+        font-weight: 600;
+        color: #fff;
+    }
+    @keyframes show{
+        0%
+        {
+            transform: translateX(100%
+            );
+        }
+        40%
+        {
+            transform: translateX(-5%);
+        }
+        80%
+        {
+            transform: translateX(0%);
+        }
+        100%
+        {
+            transform: translateX(-10%);
+        }
+    }
+    .Toast::before
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--color);
+        width: 100%;
+        height: 3px;
+        content: '';
+        box-shadow: 0 0 10px var(--color);
+        animation: timeOut 5s linear 1 forwards;
+    }
+
+    @keyframes timeOut{
+        to
+        {
+            width: 0;
+        }
+    }
+    .error
+    {
+        --color: #f24d4c;
+        background-image: linear-gradient(to right, #d44a4aad, rgba(255, 255, 255, 0) 30%);
+    }
+
+
+
+
+
+}
+
+
+
+/*  desktops*/
+@media only screen and (min-width:1440px) and (max-width:2159px) {
+    .main-login-container {
+        background-image: url('https://img.freepik.com/free-photo/black-friday-sales-sign-neon-light_23-2151833076.jpg?t=st=1767330041~exp=1767333641~hmac=e9320b46db591ec2c01c6028b6583e3682771c6641e80febb721c1ab00f97881&w=1480');
+        height: 100vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+
+
+    .login-container {
+
+        height: 400px;
+        width: 400px;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.13);
+        border-radius: 4px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(2.6px);
+        -webkit-backdrop-filter: blur(2.6px);
+        border: 1px solid rgba(255, 255, 255, 0.24);
+    }
+
+    .top-content {
+        display: flex;
+        height: 160px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .img-logo {
+        border-radius: 50%;
+        width: 70px;
+    }
+
+    .admintext {
+        font-size: 19px;
+        color: #fff;
+    }
+
+    .admincontent {
+        font-size: 12px;
+        color: #ecf0f1;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-name,
+    .form-password {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.13);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(1.6px);
+        -webkit-backdrop-filter: blur(1.6px);
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding: 4px 10px;
+        width: 80%;
+        margin: auto;
+        border-radius: 4px;
+
+    }
+
+    .name-icon {
+        color: #fff;
+        font-size: 14px;
+    }
+
+    input {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 14px;
+
+    }
+    input:focus
+    {
+        background-color: transparent;
+    }
+
+    ::placeholder {
+        color: #fff;
+    }
+
+    .submit {
+        width: 100%;
+        width: 80%;
+        margin: auto auto;
+        background-color: var(--bs-primary);
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+    }
+
+    button {
+        width: 100%;
+        background-color: transparent;
+        border: transparent;
+        outline: none;
+        padding: 3px 0;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    .owner {
+        text-align: center;
+        color: #ecf0f1;
+    }
+
+    .submit:hover {
+        background-color: dodgerblue;
+        transition: all 0.5s;
+    }
+
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 300px;
+        height: 100px;
+        color: black;
+    }
+
+    .Toast {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.13);
+        border-radius: 2px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(1.6px);
+        -webkit-backdrop-filter: blur(1.6px);
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        position: relative;
+        padding: 10px;
+        color: #fff;
+        display: grid;
+        grid-template-columns: 60px 3fr 30px;
+        align-content: center;
+        --color:#0abf30;
+        background-image: linear-gradient(to right,#0abf3055, rgba(255, 255, 255, 0) 30% );
+        animation: show 0.3s ease 1 forwards;
+    }
+    .Toast i
+    {
+        color:var(--color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+    }
+    .Toast span,.Toast i:nth-child(3)
+    {
+    color:#fff;
+    opacity: 0.5;
+    }
+    .Toast .title
+    {
+        font-size: large;
+        font-weight: 600;
+        color: #fff;
+    }
+    @keyframes show{
+        0%
+        {
+            transform: translateX(100%
+            );
+        }
+        40%
+        {
+            transform: translateX(-5%);
+        }
+        80%
+        {
+            transform: translateX(0%);
+        }
+        100%
+        {
+            transform: translateX(-10%);
+        }
+    }
+    .Toast::before
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--color);
+        width: 100%;
+        height: 3px;
+        content: '';
+        box-shadow: 0 0 10px var(--color);
+        animation: timeOut 5s linear 1 forwards;
+    }
+
+    @keyframes timeOut{
+        to
+        {
+            width: 0;
+        }
+    }
+    .error
+    {
+        --color: #f24d4c;
+        background-image: linear-gradient(to right, #d44a4aad, rgba(255, 255, 255, 0) 30%);
+    }
+
+
+
+
+
+}
