@@ -8,8 +8,7 @@
     <title>Food Shop-Admin</title>
     <link rel="icon" type="text/png" href="./images/Black and White Modern Personal Brand Logo (1).png">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/clientorder.css">
-    <link rel="stylesheet" href="./css/clientordercanvas.css">
+    <link rel="stylesheet" href="./css/analysis.css">
 
 
 
@@ -39,8 +38,8 @@
 
 <body>
     <div class="notification">
-            
-        </div>
+
+    </div>
     <div class="admin-main-container">
         <div class="main-container-header">
             <div class="main-container-header-img">
@@ -63,96 +62,57 @@
                         <li><i class="fa-solid fa-truck-ramp-box"></i> Delivery</li>
                         <li><i class="fa-solid fa-truck"></i> Delivery Order</li>
                         <li><i class="fa-solid fa-bag-shopping"></i> Client Order</li>
-                         <li><i class="fa-solid fa-chart-simple"></i></i> Analysis</li>
+                        <li><i class="fa-solid fa-chart-simple"></i></i> Analysis</li>
                     </ul>
                 </nav>
             </div>
             <div class="login-portal">
                 <div class="admin-id">
-                   <i class="fas fa-arrow-right-from-bracket"></i>
-                  
+                    <i class="fas fa-arrow-right-from-bracket"></i>
+
                     <span class="pc-data">Admin</span>
                 </div>
             </div>
-              <i class="fas d-lg-none fa-bars"></i>
+            <i class="fas d-lg-none fa-bars"></i>
         </div>
     </div>
-    <div class="first-container-header">
-        Client Order Details
-    </div>
-    <div class="today-order-container">
-        <h1 class="today-order-tit">Today Order</h1>
-    </div>
-    <div class="order-items-today">
-        <div class="products-today">
-            <table>
-                <thead>
-                    <tr>
-                        <th>no</th>
-                        <th>date</th>
-                        <th>time</th>
-                        <th>Name</th>
-                        <th>phone</th>
-                        <th>total</th>
-                        <th>address</th>
-                        <th>deliveryStatus</th>
-                    </tr>
-                </thead>
-                <tbody class="today-items">
+    <div class="maincontainer">
+        <div class="aside">
+            <div class="aside-container">
+                <div class="close-open-icon">
+                    <i class="fas fa-bars bar-icon"></i>
+                </div>
+                <div class="nav-bar">
+                    <div class="img-src">
+                        <img src="./images/Black and White Modern Personal Brand Logo (1).png" width="140px" alt="">
+                    </div>
+                    <div class="nav-content"><i class="fa-solid fa-chart-line"></i> Dashboard</div>
+                    <div class="nav-content"><i class="fa-solid fa-users"></i> Users</div>
+                    <div class="nav-content"><i class="fa-regular fa-handshake"></i> Partners</div>
+                    <div class="nav-content"><i class="fa-solid fa-hand-holding-dollar"></i> Revenue</div>
+                    <div class="nav-content"><i class="fa-solid fa-bag-shopping"></i> Orders</div>
+                    <div class="nav-content"><i class="fa-solid fa-calendar-days"></i> Calender</div>
+                </div>
+            </div>
+        </div>
+        <div class="side-container">
+            <div class="dashboard-container">
+                <div class="dashboard-header">
+                    <div class="main-text-header">
+                         <h1 class="dashboard-text">Dashboard</h1>
+                    <p class="today-det">All The Customer Reports Here</p>
+                    </div>
+                    <div class="dayButton">
+                        <button class="btns today-button btns-active"><i class="fa-solid fa-calendar-day"></i> Today</button>
+                        <button type="button" class="btns alltime-button"><i class="fa-solid fa-calendar-week"></i> All Time</button>
 
-                </tbody>
-                <tfoot>
-                    <tr class="totalContainer">
-                        <td>TOTAL:</td>
-                        <td id="total">0</td>
-                        <td>TODAY ORDER: <span id="todaycount">0</span></td>
-                        
-                    </tr>
-                </tfoot>
-                   
-                    
-        
+                    </div>
+                </div>
 
-            </table>
+            </div>
         </div>
     </div>
 
-<div class="today-order-container">
-        <h1 class="today-order-tit">Older Order</h1>
-    </div>
-     <div class="order-items-today">
-        <div class="products-today">
-            <table>
-                <thead>
-                    <tr>
-                        <th>no</th>
-                        <th>date</th>
-                        <th>time</th>
-                        <th>Name</th>
-                        <th>phone</th>
-                        <th>total</th>
-                        <th>address</th>
-                        <th>deliveryStatus</th>
-                    </tr>
-                </thead>
-                <tbody class="old-items">
-
-                </tbody>
-                <tfoot>
-                    <tr class="totalContainer">
-                        <td>TOTAL:</td>
-                        <td id="total1">0</td>
-                        <td>TOTAL ORDER: <span id="todaycount1">0</span></td>
-                        
-                    </tr>
-                </tfoot>
-                   
-                    
-        
-
-            </table>
-        </div>
-    </div>
 
 
 
@@ -186,7 +146,8 @@
 </body>
 <!-- main Scripts -->
 <script src="./js/main.js"></script>
-<script src="./js/clientorder.js"></script>
+<script src="./js/analysis.js"></script>
+
 <!-- bootStrap Scripts -->
 <script src="./bootstrap-5.3.5-dist/js/bootstrap.min.js"></script>
 

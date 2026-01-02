@@ -44,22 +44,6 @@
         font-size: 15px;
         font-weight: 700;
     }
-     .order-item-today-active {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px 40px;
-        height: auto;
-        width: 100%;
-        margin: auto;
-           background-color: #FFF0F5;
-        color: #000;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        margin-top: 10px;
-        border-radius: 4px;
-        font-size: 15px;
-        font-weight: 700;
-    }
 
     .today-order {
         padding: 0 20px;
@@ -146,22 +130,6 @@
         font-size: 15px;
         font-weight: 700;
     }
-      .order-item-today-active {
-       display: flex;
-        flex-direction: column;
-        padding: 20px 40px;
-        height: auto;
-        gap: 30px;
-        width: 100%;
-        margin: auto;
-          background-color: #FFF0F5;
-        color: #000;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        margin-top: 10px;
-        border-radius: 4px;
-        font-size: 15px;
-        font-weight: 700;
-    }
 
     .today-order {
         padding: 0 20px;
@@ -230,7 +198,7 @@
 
 /*  tablets */
 @media only screen and (min-width:768px) and (max-width:1023px) {
-    
+
     body {
 
         width: 100%;
@@ -261,23 +229,7 @@
         border: 1px solid rgba(0, 0, 0, 0.1);
         margin-top: 10px;
         border-radius: 4px;
-        font-size: 10px;
-        font-weight: 700;
-    }
-      .order-item-today-active {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 40px;
-        height: 100px;
-        width: 100%;
-        margin: auto;
-         background-color: #FFF0F5;
-        color: #000;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        margin-top: 10px;
-        border-radius: 4px;
-        font-size: 10px;
+        font-size: 14px;
         font-weight: 700;
     }
 
@@ -369,21 +321,6 @@
         font-size: 10px;
         font-weight: 700;
     }
-      .order-item-today-active {
-        display: flex;
-        gap: 20px;
-        padding: 20px 40px;
-        height: auto;
-        width: 100%;
-        margin: auto;
-            background-color: #FFF0F5;
-        color: #000;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        margin-top: 10px;
-        border-radius: 4px;
-        font-size: 15px;
-        font-weight: 700;
-    }
 
     .today-order {
         padding: 0 20px;
@@ -436,101 +373,129 @@
 
 /*  desktops*/
 @media only screen and (min-width:1440px) and (max-width:2159px) {
-    body {
+    .maincontainer {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        display: flex;
+    }
+    .aside::-webkit-scrollbar
+    {
+        display: none;
+    }
 
+    .aside {
+        width: 14%;
+        height: 94.3vh;
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+        overflow-y: hidden;
+        transition: all 0.5s ease-in-out;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.3px);
+        -webkit-backdrop-filter: blur(0.3px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .side-container
+    {
+        background-color: #ecf0f1;
         width: 100%;
     }
 
-    .deliveryordertit {
+    .close-open-icon {
+        display: flex;
+        justify-content: end;
         padding: 10px;
+    }
+
+    .bar-icon {
         font-size: 20px;
-        font-weight: 600;
+        cursor: pointer;
+    }
+    .bar-icon:hover
+    {
+       color: #ff4343;
+       transition: all 0.4s;
     }
 
-    .today-delivery-order,
-    .today-delivered-order {
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        padding: 10px 0;
-        background-color: #ecf0f1;
+    .aside-active {
+        width: 2.5%;
+        transition: all 0.5s ease-in-out;
     }
 
-    .order-item-today {
+    .nav-content {
         display: flex;
-        justify-content: space-between;
+        padding: 10px;
         align-items: center;
-        padding: 20px 40px;
-        height: 100px;
-        width: 80%;
-        margin: auto;
-        background-color: #fff;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        margin-top: 10px;
-        border-radius: 4px;
-        font-size: 12px;
-        font-weight: 700;
-    }
-      .order-item-today-active {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 40px;
-        height: 100px;
-        width: 80%;
-        margin: auto;
-        background-color: #FFF0F5;
+        gap: 23px;
         color: #000;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        margin-top: 10px;
-        border-radius: 4px;
-        font-size: 12px;
-        font-weight: 700;
+        transition: all 0.4s;
     }
-
-    .today-order {
-        padding: 0 20px;
-    }
-
-    .orderstatus {
-        color: #ff4343;
-    }
-
-    .button-container {
-        margin-top: 10px;
-        display: flex;
-        gap: 20px;
-    }
-
-    button {
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        font-weight: 500;
-        font-size: 15px;
-    }
-
-    button:hover {
+    .nav-content:hover
+    {
         background-color: #ff9900;
         color: #fff;
-
-
+        transition: all 0.4s;
+        cursor: pointer;
     }
-
-    .order-det {
-        width: 33%;
+    .img-src {
+        display: flex;
+        justify-content: center;
+         transition: all 5s;
     }
-
-    .user-det {
-        width: 34%;
+    .img-src-inactive
+    {
+        display: none;
+        transition: all 5s;
     }
-
-    .user-cont,
-    .user-cont1 {
-        width: 20%;
+    .dashboard-container
+    {
+        padding: 10px 25px;
     }
-
-    .height {
-        height: 100px;
+    .dashboard-text
+    {
+        color:#554d4d;
+        font-weight: 400;
     }
-
-
+    .dashboard-header
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .today-det
+    {
+        font-size: 12px;
+        color: #4934349f;
+    }
+    .dayButton
+    {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .btns
+    {
+        color: #ff4332;
+        background-color:#fff;
+        padding: 5px 20px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 1px 2px 12px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s;
+        border-radius: 5px;
+    }
+    .btns-active
+    {
+        background-color: #ff4343;
+        color: #fff;
+        transition: all 0.4s;
+    }
+    .btns:hover
+    {
+        background-color: #ff4332;
+        color: #fff;
+        transition: all 0.4s;
+    }
 
 
 

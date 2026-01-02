@@ -310,7 +310,7 @@ function todayOrder(todaypro, index, uniqArray) {
     const total = document.getElementById('todaycount')
     var todayTotalOrder = todayItems.children.length;
     total.innerText = todayTotalOrder;
-    localStorage.setItem('todayordercount', todayTotalOrder)
+    localStorage.setItem('todayordercount', todayTotalOrder === 0 ? 0 : todayTotalOrder )
 
     var totalValue = 0;
     const totalAmtElement = document.querySelectorAll('.totalamt');
@@ -582,7 +582,7 @@ function oldOrder(items, index, uid) {
     else {
 
         function zeroAdd(data) {
-            return data < 9 ? `0${data}` : data;
+            return data <= 9 ? `0${data}` : data;
         }
         const orderTime1 = items.deliveryTime;
 
@@ -632,3 +632,4 @@ function oldOrder(items, index, uid) {
 
 
 
+   localStorage.setItem('todayordercount', 0)

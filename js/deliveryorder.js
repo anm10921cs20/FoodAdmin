@@ -80,7 +80,7 @@ db.ref('userorder').get('value').then((snap) => {
 
             const div = document.createElement('div');
             div.className = "today-order";
-            div.innerHTML = `<div class="order-item-today">
+            div.innerHTML = `<div class="${item.pushOrderData.isOrderStatus === false ? "order-item-today" : "order-item-today-active"}">
     <div class="order-det">
         <div class="usernameContainer">UserName:  <span class="username">${item.pushOrderData.username}</span></div>
         <div class="useruidContainer">UserId: <span class="useruid">${item.pushOrderData.useruid}</span></div>
@@ -264,7 +264,7 @@ get(ref(deliverydb, 'deliverypartnerorder/')).then((snap) => {
         if (item.item.date === new Date().toLocaleDateString()) {
 
             function zeroAdd(data) {
-                return data < 9 ? `0${data}` : data;
+                return data <= 9 ? `0${data}` : data;
             }
 
             const orderTime = item.item.time;
@@ -288,7 +288,7 @@ get(ref(deliverydb, 'deliverypartnerorder/')).then((snap) => {
 
             const div = document.createElement('div');
             div.className = "today-order";
-            div.innerHTML = `<div class="order-item-today">
+            div.innerHTML = `<div class="${item.item.isOrderDeliveryStatus === false ? "order-item-today" : "order-item-today-active"}">
     <div class="order-det">
         <div class="usernameContainer">UserName:  <span class="username">${item.item.orderstatus.username}</span></div>
         <div class="useruidContainer">UserId: <span class="useruid">${item.item.orderstatus.username}</span></div>

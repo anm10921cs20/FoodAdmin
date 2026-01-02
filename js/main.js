@@ -24,6 +24,8 @@ const client = document.getElementsByTagName('li')[0]
 const delviery = document.getElementsByTagName('li')[1]
 const deliveryOrder = document.getElementsByTagName('li')[2]
 const clientOrder = document.getElementsByTagName('li')[3]
+const analysis = document.getElementsByTagName('li')[4]
+
 const adminLogout = document.getElementsByClassName('login-portal')[0];
 
 client.addEventListener('click', () => {
@@ -41,20 +43,25 @@ deliveryOrder.addEventListener('click', () => {
 clientOrder.addEventListener('click', () => {
     window.location.href = "./clientorder.html";
 })
+analysis.addEventListener('click', () => {
+    window.location.href = "./analysis.html";
+})
+
+
 adminLogout.addEventListener('click',() => {
 
      let type = "success"
         let icon = "fa-solid fa-circle-check";
         let title ="Success";
-        let text = "LogOut Succeessfully"
+        let text = "Logout Succeessfully"
 
         createToast(type, icon, title, text)
          
 
 
-    // setTimeout(() => {
-    //      window.location.replace("./index.html");
-    // },4000)
+    setTimeout(() => {
+         window.location.replace("./index.html");
+    },4000)
    
 
 })

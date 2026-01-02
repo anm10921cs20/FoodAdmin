@@ -845,7 +845,7 @@
 
     .notification {
         position: fixed;
-        top: 20px;
+        bottom: 20px;
         right: 20px;
         width: 300px;
         height: 100px;
@@ -1075,7 +1075,7 @@
 
     .notification {
         position: fixed;
-        top: 20px;
+        bottom: 20px;
         right: 20px;
         width: 300px;
         height: 100px;
