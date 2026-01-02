@@ -16,7 +16,7 @@
 
 @media only screen and (min-width:200px) and (max-width:399px) {
      .main-login-container {
-        background-image: url('https://img.freepik.com/free-photo/black-friday-sales-sign-neon-light_23-2151833076.jpg?t=st=1767330041~exp=1767333641~hmac=e9320b46db591ec2c01c6028b6583e3682771c6641e80febb721c1ab00f97881&w=1480');
+        background-image: url('../images/black-friday-sales-sign-neon-light_23-2151833076.avif');
         height: 100vh;
         width: 100%;
         background-repeat: no-repeat;
@@ -246,7 +246,7 @@
 
 @media only screen and (min-width:400px) and (max-width:767px) {
      .main-login-container {
-        background-image: url('https://img.freepik.com/free-photo/black-friday-sales-sign-neon-light_23-2151833076.jpg?t=st=1767330041~exp=1767333641~hmac=e9320b46db591ec2c01c6028b6583e3682771c6641e80febb721c1ab00f97881&w=1480');
+        background-image: url('../images/black-friday-sales-sign-neon-light_23-2151833076.avif');
         height: 100vh;
         width: 100%;
         background-repeat: no-repeat;
@@ -482,7 +482,7 @@
 /*  tablets */
 @media only screen and (min-width:768px) and (max-width:1023px) {
     .main-login-container {
-        background-image: url('https://img.freepik.com/free-photo/black-friday-sales-sign-neon-light_23-2151833076.jpg?t=st=1767330041~exp=1767333641~hmac=e9320b46db591ec2c01c6028b6583e3682771c6641e80febb721c1ab00f97881&w=1480');
+        background-image: url('../images/black-friday-sales-sign-neon-light_23-2151833076.avif');
         height: 100vh;
         width: 100%;
         background-repeat: no-repeat;
@@ -714,7 +714,7 @@
 @media only screen and (min-width:1024px) and (max-width:1439px) {
 
  .main-login-container {
-        background-image: url('https://img.freepik.com/free-photo/black-friday-sales-sign-neon-light_23-2151833076.jpg?t=st=1767330041~exp=1767333641~hmac=e9320b46db591ec2c01c6028b6583e3682771c6641e80febb721c1ab00f97881&w=1480');
+        background-image: url('../images/black-friday-sales-sign-neon-light_23-2151833076.avif');
         height: 100vh;
         width: 100%;
         background-repeat: no-repeat;
@@ -944,7 +944,7 @@
 /*  desktops*/
 @media only screen and (min-width:1440px) and (max-width:2159px) {
     .main-login-container {
-        background-image: url('https://img.freepik.com/free-photo/black-friday-sales-sign-neon-light_23-2151833076.jpg?t=st=1767330041~exp=1767333641~hmac=e9320b46db591ec2c01c6028b6583e3682771c6641e80febb721c1ab00f97881&w=1480');
+        background-image: url('../images/black-friday-sales-sign-neon-light_23-2151833076.avif');
         height: 100vh;
         width: 100%;
         background-repeat: no-repeat;

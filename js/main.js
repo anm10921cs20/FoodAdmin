@@ -24,6 +24,7 @@ const client = document.getElementsByTagName('li')[0]
 const delviery = document.getElementsByTagName('li')[1]
 const deliveryOrder = document.getElementsByTagName('li')[2]
 const clientOrder = document.getElementsByTagName('li')[3]
+const adminLogout = document.getElementsByClassName('login-portal')[0];
 
 client.addEventListener('click', () => {
     window.location.href = "./client.html";
@@ -40,6 +41,24 @@ deliveryOrder.addEventListener('click', () => {
 clientOrder.addEventListener('click', () => {
     window.location.href = "./clientorder.html";
 })
+adminLogout.addEventListener('click',() => {
+
+     let type = "success"
+        let icon = "fa-solid fa-circle-check";
+        let title ="Success";
+        let text = "LogOut Succeessfully"
+
+        createToast(type, icon, title, text)
+         
+
+
+    setTimeout(() => {
+         window.location.replace("./index.html");
+    },4000)
+   
+
+})
+
 
 
 const navBarClose  = document.getElementsByClassName('fa-close')[0];
@@ -53,3 +72,25 @@ navBarOpen.addEventListener('click', () => {
      const navContainer = document.getElementsByClassName('nav-container')[0];
      navContainer.classList.add('nav-container-active')
 })
+
+
+
+
+function createToast(type, icon, title, text)
+{
+    const notification = document.getElementsByClassName('notification')[0];
+    const div = document.createElement('div');
+    div.innerHTML =  `
+    <div class="Toast ${type}">
+                <i class="${icon}"></i>
+                <div class="content">
+                    <div class="title">${title}</div>
+                    <span>${text}</span>
+                </div>
+                <i class="fas fa-close" onclick="(this.parentElement).remove()"></i>
+            </div>
+    `;
+    notification.appendChild(div)
+    div.timeOut = setTimeout(() => div.remove(),5000)
+
+}

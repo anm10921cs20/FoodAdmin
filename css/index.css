@@ -12,7 +12,7 @@
 
 
 @media only screen and (min-width:200px) and (max-width:399px) {
-     body {
+    body {
         width: 100%;
     }
 
@@ -30,8 +30,8 @@
         border-radius: 50%;
 
     }
-    .main-container-header
-    {
+
+    .main-container-header {
         display: flex;
         justify-content: space-between;
         padding: 0 10px;
@@ -39,35 +39,37 @@
         align-items: center;
         width: 100%;
     }
-    .main-container-header-img
-    {
+
+    .main-container-header-img {
         display: flex;
         gap: 10px;
     }
-    .fa-circle-user,.fa-bars,.fa-close
-    {
+
+    .fa-arrow-right-from-bracket,
+    .fa-bars,
+    .fa-close {
         font-size: 25px;
     }
-    .pc-data
-    {
+
+    .pc-data {
         display: none;
     }
-    .admin-id
-    {
+
+    .admin-id {
         display: flex;
         gap: 14px;
         margin-bottom: 7px;
     }
-    .nav-header
-    {
+
+    .nav-header {
         color: #fff;
         height: 50px;
         padding: 10px 20px;
         display: flex;
         justify-content: space-between;
     }
-    .main-container-header-img p
-    {
+
+    .main-container-header-img p {
         text-shadow: 1px 2px 2px #000;
     }
 
@@ -87,12 +89,12 @@
         height: 100%;
         width: 100%;
         margin-left: -500px;
-        transition: margin-left 1s ;
+        transition: margin-left 1s;
     }
-    .nav-container-active
-    {
+
+    .nav-container-active {
         margin-left: 0;
-        transition: margin-left 1s ;
+        transition: margin-left 1s;
     }
 
 
@@ -109,12 +111,101 @@
         padding: 10px;
         color: #ff4343;
     }
-      .first-container-header {
+
+    .first-container-header {
         text-align: center;
         padding: 10px 0;
         font-size: 23px;
         border: 1px solid rgba(0, 0, 0, 0.1);
         width: 100%;
+    }
+
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 300px;
+        height: 100px;
+        color: black;
+        z-index: 1000;
+
+    }
+
+    .Toast {
+        /* From https://css.glass */
+        border-radius: 3px;
+        background-color: #ff4343;
+        position: relative;
+        padding: 10px;
+        color: #fff;
+        display: grid;
+        grid-template-columns: 60px 3fr 30px;
+        align-content: center;
+        --color: #fff;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1),
+            -1px -1px 2px rgba(0, 0, 0, 0.1);
+        animation: show 0.3s ease 1 forwards;
+    }
+
+    .Toast i {
+        color: var(--color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    .Toast span,
+    .Toast i:nth-child(3) {
+        color: #fff;
+        opacity: 0.5;
+    }
+
+    .Toast .title {
+        font-size: large;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    @keyframes show {
+        0% {
+            transform: translateX(100%);
+        }
+
+        40% {
+            transform: translateX(-5%);
+        }
+
+        80% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-10%);
+        }
+    }
+
+    .Toast::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--color);
+        width: 100%;
+        height: 3px;
+        content: '';
+        box-shadow: 0 0 10px var(--color);
+        animation: timeOut 5s linear 1 forwards;
+    }
+
+    @keyframes timeOut {
+        to {
+            width: 0;
+        }
+    }
+
+    .error {
+        --color: #f24d4c;
+        background-image: linear-gradient(to right, #d44a4aad, rgba(255, 255, 255, 0) 30%);
     }
 
 
@@ -143,43 +234,45 @@
         border-radius: 50%;
 
     }
-    .main-container-header
-    {
+
+    .main-container-header {
         display: flex;
         justify-content: space-between;
         padding: 0 10px;
         color: #fff;
         align-items: center;
     }
-    .main-container-header-img
-    {
+
+    .main-container-header-img {
         display: flex;
         gap: 10px;
     }
-    .fa-circle-user,.fa-bars,.fa-close
-    {
+
+    .fa-arrow-right-from-bracket,
+    .fa-bars,
+    .fa-close {
         font-size: 25px;
     }
-    .pc-data
-    {
+
+    .pc-data {
         display: none;
     }
-    .admin-id
-    {
+
+    .admin-id {
         display: flex;
         gap: 14px;
         margin-bottom: 7px;
     }
-    .nav-header
-    {
+
+    .nav-header {
         color: #fff;
         height: 50px;
         padding: 10px 20px;
         display: flex;
         justify-content: space-between;
     }
-    .main-container-header-img p
-    {
+
+    .main-container-header-img p {
         text-shadow: 1px 2px 2px #000;
     }
 
@@ -199,12 +292,12 @@
         height: 100vh;
         width: 100%;
         margin-left: -500px;
-        transition: margin-left 1s ;
+        transition: margin-left 1s;
     }
-    .nav-container-active
-    {
+
+    .nav-container-active {
         margin-left: 0;
-        transition: margin-left 1s ;
+        transition: margin-left 1s;
     }
 
 
@@ -221,12 +314,101 @@
         padding: 10px;
         color: #ff4343;
     }
-      .first-container-header {
+
+    .first-container-header {
         text-align: center;
         padding: 10px 0;
         font-size: 23px;
         border: 1px solid rgba(0, 0, 0, 0.1);
         width: 100%;
+    }
+
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 300px;
+        height: 100px;
+        color: black;
+        z-index: 1000;
+
+    }
+
+    .Toast {
+        /* From https://css.glass */
+        border-radius: 3px;
+        background-color: #ff4343;
+        position: relative;
+        padding: 10px;
+        color: #fff;
+        display: grid;
+        grid-template-columns: 60px 3fr 30px;
+        align-content: center;
+        --color: #fff;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1),
+            -1px -1px 2px rgba(0, 0, 0, 0.1);
+        animation: show 0.3s ease 1 forwards;
+    }
+
+    .Toast i {
+        color: var(--color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    .Toast span,
+    .Toast i:nth-child(3) {
+        color: #fff;
+        opacity: 0.5;
+    }
+
+    .Toast .title {
+        font-size: large;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    @keyframes show {
+        0% {
+            transform: translateX(100%);
+        }
+
+        40% {
+            transform: translateX(-5%);
+        }
+
+        80% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-10%);
+        }
+    }
+
+    .Toast::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--color);
+        width: 100%;
+        height: 3px;
+        content: '';
+        box-shadow: 0 0 10px var(--color);
+        animation: timeOut 5s linear 1 forwards;
+    }
+
+    @keyframes timeOut {
+        to {
+            width: 0;
+        }
+    }
+
+    .error {
+        --color: #f24d4c;
+        background-image: linear-gradient(to right, #d44a4aad, rgba(255, 255, 255, 0) 30%);
     }
 
 
@@ -251,7 +433,7 @@
 
 /*  tablets */
 @media only screen and (min-width:768px) and (max-width:1023px) {
-     body {
+    body {
         width: 100%;
     }
 
@@ -265,43 +447,45 @@
         border-radius: 50%;
 
     }
-    .main-container-header
-    {
+
+    .main-container-header {
         display: flex;
         justify-content: space-between;
         padding: 0 10px;
         color: #fff;
         align-items: center;
     }
-    .main-container-header-img
-    {
+
+    .main-container-header-img {
         display: flex;
         gap: 10px;
     }
-    .fa-circle-user,.fa-bars,.fa-close
-    {
+
+    .fa-arrow-right-from-bracket,
+    .fa-bars,
+    .fa-close {
         font-size: 25px;
     }
-    .pc-data
-    {
+
+    .pc-data {
         display: none;
     }
-    .admin-id
-    {
+
+    .admin-id {
         display: flex;
         gap: 14px;
         margin-bottom: 7px;
     }
-    .nav-header
-    {
+
+    .nav-header {
         color: #fff;
         height: 50px;
         padding: 10px 20px;
         display: flex;
         justify-content: space-between;
     }
-    .main-container-header-img p
-    {
+
+    .main-container-header-img p {
         text-shadow: 1px 2px 2px #000;
     }
 
@@ -321,12 +505,12 @@
         height: 100vh;
         width: 100%;
         margin-left: -1250px;
-        transition: margin-left 1s ;
+        transition: margin-left 1s;
     }
-    .nav-container-active
-    {
+
+    .nav-container-active {
         margin-left: 0;
-        transition: margin-left 1s ;
+        transition: margin-left 1s;
     }
 
 
@@ -343,12 +527,101 @@
         padding: 10px;
         color: #ff4343;
     }
-      .first-container-header {
+
+    .first-container-header {
         text-align: center;
         padding: 10px 0;
         font-size: 23px;
         border: 1px solid rgba(0, 0, 0, 0.1);
         width: 100%;
+    }
+
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 300px;
+        height: 100px;
+        color: black;
+        z-index: 1000;
+
+    }
+
+    .Toast {
+        /* From https://css.glass */
+        border-radius: 3px;
+        background-color: #ff4334;
+        position: relative;
+        padding: 10px;
+        color: #fff;
+        display: grid;
+        grid-template-columns: 60px 3fr 30px;
+        align-content: center;
+        --color: #fff;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1),
+            -1px -1px 2px rgba(0, 0, 0, 0.1);
+        animation: show 0.3s ease 1 forwards;
+    }
+
+    .Toast i {
+        color: var(--color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    .Toast span,
+    .Toast i:nth-child(3) {
+        color: #fff;
+        opacity: 0.5;
+    }
+
+    .Toast .title {
+        font-size: large;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    @keyframes show {
+        0% {
+            transform: translateX(100%);
+        }
+
+        40% {
+            transform: translateX(-5%);
+        }
+
+        80% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-10%);
+        }
+    }
+
+    .Toast::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--color);
+        width: 100%;
+        height: 3px;
+        content: '';
+        box-shadow: 0 0 10px var(--color);
+        animation: timeOut 5s linear 1 forwards;
+    }
+
+    @keyframes timeOut {
+        to {
+            width: 0;
+        }
+    }
+
+    .error {
+        --color: #f24d4c;
+        background-image: linear-gradient(to right, #d44a4aad, rgba(255, 255, 255, 0) 30%);
     }
 
 
@@ -365,6 +638,7 @@
         outline: none;
         user-select: none;
     }
+
     .mobile-data {
         display: none;
     }
@@ -440,6 +714,94 @@
         border: 1px solid rgba(0, 0, 0, 0.1);
     }
 
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 300px;
+        height: 100px;
+        color: black;
+        z-index: 1000;
+
+    }
+
+    .Toast {
+        /* From https://css.glass */
+        border-radius: 3px;
+        background-color: #ff4343;
+        position: relative;
+        padding: 10px;
+        color: #fff;
+        display: grid;
+        grid-template-columns: 60px 3fr 30px;
+        align-content: center;
+        --color: #fff;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1),
+            -1px -1px 2px rgba(0, 0, 0, 0.1);
+        animation: show 0.3s ease 1 forwards;
+    }
+
+    .Toast i {
+        color: var(--color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    .Toast span,
+    .Toast i:nth-child(3) {
+        color: #fff;
+        opacity: 0.5;
+    }
+
+    .Toast .title {
+        font-size: large;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    @keyframes show {
+        0% {
+            transform: translateX(100%);
+        }
+
+        40% {
+            transform: translateX(-5%);
+        }
+
+        80% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-10%);
+        }
+    }
+
+    .Toast::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--color);
+        width: 100%;
+        height: 3px;
+        content: '';
+        box-shadow: 0 0 10px var(--color);
+        animation: timeOut 5s linear 1 forwards;
+    }
+
+    @keyframes timeOut {
+        to {
+            width: 0;
+        }
+    }
+
+    .error {
+        --color: #f24d4c;
+        background-image: linear-gradient(to right, #d44a4aad, rgba(255, 255, 255, 0) 30%);
+    }
+
 }
 
 
@@ -451,6 +813,7 @@
         user-select: none;
         width: 100%;
     }
+
     .mobile-data {
         display: none;
     }
@@ -461,7 +824,7 @@
         background-color: #ff9900;
         box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      
+
     }
 
     .main-container-header {
@@ -470,7 +833,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 0px 20px;
-          width: 100%;
+        width: 100%;
     }
 
     .main-container-header-img img {
@@ -500,12 +863,20 @@
 
     }
 
+    .nav-menu li {
+        position: relative;
+        padding: 4px 0;
+    }
+
+
 
     .nav-menu li:hover {
         cursor: pointer;
         color: #ff4343;
         transition: all 0.5s;
     }
+
+  
 
     .admin-id {
         padding: 5px 10px;
@@ -529,7 +900,95 @@
         width: 100%;
     }
 
-   
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 300px;
+        height: 100px;
+        color: black;
+        z-index: 1000;
+
+    }
+
+    .Toast {
+        /* From https://css.glass */
+        border-radius: 3px;
+        background-color: #ff4343;
+        position: relative;
+        padding: 10px;
+        color: #fff;
+        display: grid;
+        grid-template-columns: 60px 3fr 30px;
+        align-content: center;
+        --color: #fff;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1),
+            -1px -1px 2px rgba(0, 0, 0, 0.1);
+        animation: show 0.3s ease 1 forwards;
+    }
+
+    .Toast i {
+        color: var(--color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    .Toast span,
+    .Toast i:nth-child(3) {
+        color: #fff;
+        opacity: 0.5;
+    }
+
+    .Toast .title {
+        font-size: large;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    @keyframes show {
+        0% {
+            transform: translateX(100%);
+        }
+
+        40% {
+            transform: translateX(-5%);
+        }
+
+        80% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-10%);
+        }
+    }
+
+    .Toast::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--color);
+        width: 100%;
+        height: 3px;
+        content: '';
+        box-shadow: 0 0 10px var(--color);
+        animation: timeOut 5s linear 1 forwards;
+    }
+
+    @keyframes timeOut {
+        to {
+            width: 0;
+        }
+    }
+
+    .error {
+        --color: #f24d4c;
+        background-image: linear-gradient(to right, #d44a4aad, rgba(255, 255, 255, 0) 30%);
+    }
+
+
 
 
 }
