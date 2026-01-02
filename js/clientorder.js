@@ -580,10 +580,30 @@ function oldOrder(items, index, uid) {
 
     }
     else {
+
+        function zeroAdd(data) {
+            return data < 9 ? `0${data}` : data;
+        }
+        const orderTime1 = items.deliveryTime;
+
+
+
+
+
+        const convertNormalTimeElement = parseInt(orderTime1.slice(0, 2));
+
+
+        const hours = zeroAdd(convertNormalTimeElement === 0 ? 12 : convertNormalTimeElement > 12 ? convertNormalTimeElement - 12 : convertNormalTimeElement);
+        const minutes = zeroAdd(parseInt(orderTime1.slice(3, 5)));
+
+
+
+        const second = zeroAdd(parseInt(orderTime1.slice(6, 8)))
+        const median = convertNormalTimeElement < 12 ? "AM" : "PM";
         const divIsOrderStatus = document.createElement('div');
         divIsOrderStatus.className = "isorder-status";
         divIsOrderStatus.innerHTML = `
-             <div class="order-status-text">Order Delivered
+             <div class="order-status-text">Order Delivered  ${hours}:${minutes}:${second} ${median}
              <i class="fa-solid fa-circle-check"></i></i>
              </div>
              `;

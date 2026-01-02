@@ -51,18 +51,25 @@ db.ref('userorder').get('value').then((snap) => {
         if (item.pushOrderData.date === new Date().toLocaleDateString()) {
 
             function zeroAdd(data) {
-                return data < 9 ? `0${data}` : data;
+                return data <= 9 ? `0${data}` : data;
             }
 
             const orderTime = item.pushOrderData.time;
-            const convertNormalTimeElement = parseInt(orderTime.slice(0, 2));
+   
+            
+            const convertNormalTimeElement = parseInt(orderTime.slice(0, 3));
             const hours = zeroAdd(convertNormalTimeElement === 0 ? 12 : convertNormalTimeElement > 12 ? convertNormalTimeElement - 12 : convertNormalTimeElement);
+          
+            
             const minutes = zeroAdd(parseInt(orderTime.slice(3, 5)));
+           
+            
 
             const second = zeroAdd(parseInt(orderTime.slice(6, 8)))
             const median = convertNormalTimeElement < 12 ? "AM" : "PM";
 
-
+         
+            
 
 
 
@@ -222,6 +229,9 @@ function readytodeliver(event) {
         }
 
     })
+        setTimeout(() => {
+        window.location.reload();
+    },1000)
 
 
 }
