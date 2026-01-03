@@ -240,6 +240,7 @@ function todayOrder(todaypro, index, uniqArray) {
         }
 
         offCanavs.style.overflowY = "scroll";
+        offCanavs.style.zIndex = "4000"
 
 
 
@@ -508,7 +509,8 @@ function oldOrder(items, index, uid) {
         }
 
         offCanavs.style.overflowY = "scroll";
-        offCanavs.style.scrollBehavior = "smooth"
+        offCanavs.style.scrollBehavior = "smooth";
+         offCanavs.style.zIndex = "4000"
 
 
 

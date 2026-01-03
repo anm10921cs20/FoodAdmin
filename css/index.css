@@ -842,6 +842,7 @@
         background-color: #ff9900;
         box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        z-index: 2000;
 
     }
 
@@ -932,7 +933,7 @@
     .Toast {
         /* From https://css.glass */
         border-radius: 3px;
-        background-color: #ff4343;
+        background-color: #1a922e;
         position: relative;
         padding: 10px;
         color: #fff;
