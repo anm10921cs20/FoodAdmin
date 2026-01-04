@@ -17,6 +17,11 @@ db.ref('userorder/').get('value').then((snapshot) => {
     const userValue = user <= 9 ? `0${user}` : user;
     userElement.textContent = userValue;
 
+    const userwidth = document.getElementById('userwidth');
+    const userpercent = document.getElementById('userpercent');
+    userwidth.style.width = `${userValue}%`
+    userpercent.textContent = user+'%'
+
 
     // orders count
     var todayOrderArray = [];
@@ -41,6 +46,14 @@ db.ref('userorder/').get('value').then((snapshot) => {
     todayOrder = filterToday.length;
     const orderValue = todayOrder <= 9 ? `0${todayOrder}` : todayOrder;
     todayOrders.textContent = orderValue;
+    const torderswidth = document.getElementById('torderswidth');
+    const torderspercent = document.getElementById('torderspercent');
+
+    torderswidth.style.width = `${todayOrder}%`;
+    torderspercent.textContent = todayOrder+'%';
+
+    
+
 
     //    products 
     var foodCount = 0;
@@ -52,6 +65,10 @@ db.ref('userorder/').get('value').then((snapshot) => {
     })
     const foodValue = foodCount <= 9 ? `0${foodCount}` : foodCount;
     productsOrder.textContent = foodValue;
+    const proorderswidth = document.getElementById('proorderswidth');
+    const proorderspercent = document.getElementById('proorderspercent');
+    proorderswidth.style.width = `${foodCount}%`;
+    proorderspercent.textContent = foodCount+'%';
 
 
 
@@ -119,22 +136,66 @@ db.ref('userorder/').get('value').then((snapshot) => {
         deliverCart(price)
 
     })
-    RevenueElement.textContent = "Rs." + revenueDeliver
+    RevenueElement.textContent = "Rs." + revenueDeliver;
+    
+    const todeliverwidth = document.getElementById('todeliverwidth');
+    const todeliverpercent = document.getElementById('todeliverpercent');
+    const torevenuewidth = document.getElementById('revenuewidth');
+    const torevenuepercent = document.getElementById('revenuepercent');
+    const productswidth = document.getElementById('productswidth');
+    const productspercent= document.getElementById('productspercent');
+    const varietywidth = document.getElementById('varietywidth');
+    const varietypercent = document.getElementById('varietypercent');
+
+    todeliverwidth.style.width = `${filterDeliveredCount}%`;
+    todeliverpercent.textContent = filterDeliveredCount+'%';
+    torevenuewidth.style.width = `${revenueDeliver/500}%`;
+    torevenuepercent.textContent = Math.floor(revenueDeliver/500) +'%';
+    var product = 98;
+    productswidth.style.width = `${product}%`;
+    productspercent.textContent = product+'%';
+    var variety = 50;
+    varietywidth.style.width = `${variety}%`
+    varietypercent.textContent = variety+'%';
 
 
-     if (filterDeliver.length <= 0) {
+
+
+
+
+
+    
+ if (filterToday.length <= 0) {
 
             const empty = document.createElement('div');
             empty.className = "empty-container";
             empty.innerHTML = `
-        <div>No Orders Proccessing</div>
+        <div>No Orders Found</div>
         `
 
 
-            const deliveredContainer1 = document.getElementsByClassName('process-content')[0];
-            deliveredContainer1.appendChild(empty);
+            const deliveredContainer3 = document.getElementsByClassName('users')[0];
+            const mainUsers = document.getElementsByClassName('main-users')[0];
+            deliveredContainer3.appendChild(empty);
+            mainUsers.style.display = "none";
         }
 
+
+        if (filterToday.length <= 0) {
+
+            const empty = document.createElement('div');
+            empty.className = "empty-container";
+            empty.innerHTML = `
+        <div>No Orders Found</div>
+        `
+
+
+        
+            const mainUsers1 = document.getElementsByClassName('products-variety')[0];
+            mainUsers1.appendChild(empty);
+          
+        }
+    
 
 
 
@@ -168,19 +229,42 @@ function deliverCart(price) {
     }
 
 
+ const timeZero = (data) => {
+            return data <= 9 ? `0${data}` : data;
+        }
+
+        const time = price.datavalue.time;
+        const hours = parseInt(time.slice(0,2));
+        const hoursLocal = timeZero(hours === 0 ? 12 : hours > 12 ? hours - 12 : hours);
+        const minutes = timeZero(parseInt(time.slice(3,5)));
+        const second =  timeZero(parseInt(time.slice(6,8)));
+        const median = hours < 12 ? 'AM': 'PM';
+
+         const time1 = price.datavalue.deliveryTime;
+        const hours1 = parseInt(time1.slice(0,2));
+        const hoursLocal1 = timeZero(hours1 === 0 ? 12 : hours1 > 12 ? hours1 - 12 : hours1);
+        const minutes1 = timeZero(parseInt(time1.slice(3,5)));
+        const second1 =  timeZero(parseInt(time1.slice(6,8)));
+        const median1 = hours1 < 12 ? 'AM': 'PM';
+
+
+
+
+
+
 
     const deliverDiv = document.createElement('div');
     deliverDiv.className = " item-delivered";
     deliverDiv.innerHTML = `
      <div class="main-content">
         <p class="orderid">Order Id ${orderId}</p>
-         <p class="order-time">Order Time:${price.datavalue.time}</p>
+         <p class="order-time">Order Time:${hoursLocal}:${minutes}:${second} ${median}</p>
         <p class="order-date">Order Date:${price.datavalue.date}</p>
            </div>
         <div class="item-content">
             <p class="items-count">Items: ${price.datavalue.food.length}</p>
             <p class="items-price">Total Amt :${price.datavalue.total.ToPay}</p>
-          <p class="delivery-time">Delivery Time:${price.datavalue.deliveryTime}</p>
+          <p class="delivery-time">DelTime:${hoursLocal1}:${minutes1}:${second1} ${median1}</p>
        </div>
             <div class="delivred-sym">
            <p class="items-delivered">Delivered <i
@@ -205,13 +289,23 @@ function processCart(item, id) {
         orderuid += charset[random];
 
     }
+      const timeZero = (data) => {
+            return data <= 9 ? `0${data}` : data;
+        }
+
+        const time = item.datavalue.time;
+        const hours = parseInt(time.slice(0,2));
+        const hoursLocal = timeZero(hours === 0 ? 12 : hours > 12 ? hours - 12 : hours);
+        const minutes = timeZero(parseInt(time.slice(3,5)));
+        const second =  timeZero(parseInt(time.slice(6,8)));
+        const median = hours < 12 ? 'AM': 'PM';
 
     const processDiv = document.createElement('div');
     processDiv.className = " item-delivered";
     processDiv.innerHTML = `
      <div class="main-content">
         <p class="orderid">Order Id ${orderuid}</p>
-         <p class="order-time">Order Time:${item.datavalue.time}</p>
+         <p class="order-time">Order Time:${hoursLocal}:${minutes}:${second} ${median}</p>
         <p class="order-date">Order Date:${item.datavalue.date}</p>
            </div>
         <div class="item-content">

@@ -288,83 +288,540 @@
 @media only screen and (min-width:1024px) and (max-width:1439px) {
 
 
-    body {
-
-        width: 100%;
-    }
-
-    .deliveryordertit {
-        padding: 10px;
-        font-size: 20px;
-        font-weight: 600;
-    }
-
-    .today-delivery-order,
-    .today-delivered-order {
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        padding: 10px 0;
-        background-color: #ecf0f1;
-    }
-
-    .order-item-today {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 40px;
-        height: 100px;
-        width: 100%;
-        margin: auto;
-        background-color: #fff;
+   .maincontainer {
         border: 1px solid rgba(0, 0, 0, 0.1);
-        margin-top: 10px;
-        border-radius: 4px;
-        font-size: 10px;
-        font-weight: 700;
-    }
-
-    .today-order {
-        padding: 0 20px;
-    }
-
-    .orderstatus {
-        color: #ff4343;
-    }
-
-    .button-container {
-        margin-top: 10px;
         display: flex;
-        gap: 10px;
+        width: 100%;
+        height: auto;
     }
 
-    button {
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        font-weight: 500;
+    .aside::-webkit-scrollbar {
+        display: none;
+    }
+
+    .aside {
+        width: 16%;
+        height: 94.3vh;
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+        overflow-y: hidden;
+        transition: all 0.5s ease-in-out;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.3px);
+        -webkit-backdrop-filter: blur(0.3px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        position: sticky;
+        top: 53px;
         font-size: 12px;
     }
 
-    button:hover {
+    .side-container {
+        background-color: #ecf0f1;
+        width: 84%;
+        height: auto;
+    }
+    .side-container-active
+    {
+        width: 97%;
+    }
+
+    .close-open-icon {
+        display: flex;
+        justify-content: end;
+        padding: 10px;
+    }
+
+    .bar-icon {
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .bar-icon:hover {
+        color: #ff4343;
+        transition: all 0.4s;
+    }
+
+    .aside-active {
+        width: 7.5%;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .nav-content {
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        gap: 23px;
+        color: #000;
+        transition: all 0.4s;
+    }
+
+    .nav-content:hover {
         background-color: #ff9900;
         color: #fff;
+        transition: all 0.4s;
+        cursor: pointer;
+    }
 
+    .img-src {
+        display: flex;
+        justify-content: center;
+        transition: all 5s;
+    }
+
+    .img-src-inactive {
+        display: none;
+        transition: all 5s;
+    }
+
+    .dashboard-container {
+        padding: 10px 25px;
+    }
+
+    .dashboard-text {
+        color: #554d4d;
+        font-weight: 400;
+        font-size: 22px;
+    }
+
+    .dashboard-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .today-det {
+        font-size: 9px;
+        color: #000;
+    }
+
+    .dayButton {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .btns {
+        color: #ff4332;
+        background-color: #fff;
+        padding: 5px 15px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 1px 2px 12px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s;
+        border-radius: 5px;
+    }
+
+    .btns-active {
+        background-color: #ff4343;
+        color: #fff;
+        transition: all 0.4s;
+    }
+
+    .btns:hover {
+        background-color: #ff4332;
+        color: #fff;
+        transition: all 0.4s;
+    }
+
+    .alltime-container {
+        display: none;
+    }
+
+    .today-container {
+        height: auto;
+        width: 100%;
+    }
+
+    .today-first-container {
+        padding: 10px 0;
+        display: flex;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .today-first-one {
+        height: auto;
+        width: 65%;
+    }
+
+    .today-second-one {
+        height: auto;
+        width: 35%;
+    }
+
+    .first-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .countvalue {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.3px);
+        -webkit-backdrop-filter: blur(0.3px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        height: auto;
+        width: 200px;
+        background-color: #fff;
+        border-radius: 6px;
+        display: flex;
+        padding: 10px;
+    }
+    .countvalue1
+    {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.3px);
+        -webkit-backdrop-filter: blur(0.3px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        height: auto;
+        width: 300px;
+        background-color: #fff;
+        border-radius: 6px;
+        display: flex;
+        padding: 10px;
+    }
+
+    .first-value {
+        width: 70%;
+        line-height:10px;
+        font-size: 12px;
+    }
+    .name
+    {
+        color: #2b941d;
+        font-size: 10px;
+    }
+    .count
+    {
+        font-size: 12px;
+        font-weight: 700;
+    }
+    .second-value {
+        width: 20%;
+    }
+
+    .first-value h1 {
+        color: #554d4d;
+        font-weight: 100;
+        font-size: 10px;
+    }
+
+    .second-value i {
+        color: #ff4332;
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .second-one-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
 
     }
 
-    .order-det {
-        width: 33%;
+    .second-data {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.3px);
+        -webkit-backdrop-filter: blur(0.3px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        height: auto;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 6px;
     }
 
-    .user-det {
-        width: 37%;
+    .second-data h1 {
+        color: #554d4d;
+        font-weight: 100;
+        font-size: 12px;
     }
-
-    .user-cont,
-    .user-cont1 {
+    .second-data-header
+    {
+        display: flex;
+        gap: 20px;
+        padding: 5px 10px;
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .products
+    {
+        font-weight: 400;
+        padding: 10px 0;
+        font-size: 16px;
+    }
+    .content-products
+    {
+          display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 10px;
+    }
+    .second-content
+    {
+        display: flex;
+        height: auto;
+        gap: 10px;
+    }
+    .product-available
+    {
+        height: auto;
         width: 30%;
     }
-
-    .height {
-        height: 100px;
+    .products-det
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 70%;
     }
+    .second-data-header i
+    {
+        color: #ff4332;
+    }
+    .products-orders
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    /* delivered */
+    
+    .delivred-content,.process-content,.users
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+    .item-delivered
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        line-height: 9px;
+        font-size: 8px;
+        border-radius: 4px;
+        padding: 4px;
+        width: 100%;
+    }
+    .items-delivered
+    {
+        color:#2b941d;
+    }
+    .orderid
+    {
+        color: #ff9900;
+    }
+    .main-content
+    {
+        width: 50%;
+    }
+    .item-content
+    {
+        width: 30%;
+    }
+    .delivered-sym
+    {
+        width: 20%;
+    }
+    .items-process
+    {
+        color: #ff4332;
+    }
+    .main-users
+    {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 10px 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        align-items: center;
+        font-size: 12px;
+    }
+    .userimg img
+    {
+        width: 50px;
+        border-radius: 50%;
+    }
+    .username
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center ;
+        line-height: 10px;
+    }
+    .status-active
+    {
+        color: #2b941d;
+    }
+    .status-inactive
+    {
+        color: #ff4332;
+    }
+    .userimg
+    {
+        width: 20%;
+    }
+    .username
+    {
+        width: 50%;
+    }
+    .total
+    {
+        width: 30%;
+    }
+    .product-container
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .img img
+    {
+        width: 60px;
+    }
+    .product-name
+    {
+        text-transform: uppercase;
+        font-size: 14px;
+        color: #ff4332;
+    }
+    .product-type
+    {
+        color: #554d4d;
+        font-size: 12px;
+    }
+    .products-list
+    {
+       padding: 10px 20px;
+    }
+    .product-details-container
+    {
+        width: 90%;
+
+    }
+    .usernameorder
+    {
+        text-transform: uppercase;
+        font-size: 12px;
+        padding: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+    }
+    .users-product-det
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        gap: 10px;
+        font-size: 12px;
+    }
+    .products-img-container
+    {
+       width: 20%; 
+    }
+    .products-img-container img
+    {
+        width: 50px;
+        height: 50px;
+        border-radius: 20%;
+        object-fit: cover;
+    }
+    .products-name-detail
+    {
+        width: 100%;
+    }
+    .second-data
+    {
+         border: 1px solid rgba(0, 0, 0, 0.1);
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.3px);
+        -webkit-backdrop-filter: blur(0.3px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        height: auto;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 6px;
+    }
+    .orders-count-details
+    {
+        padding: 20px;
+    }
+    .range-det
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 4px;
+    }
+    .range-name
+    {
+        color: #000;
+        font-size: 12px;
+    }
+    .range-percent
+    {
+        color:#000;
+    }
+    .rangesize
+    {
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        height: 10px;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+    .range
+    {
+        display: flex;
+        flex-direction: column;
+        margin-top: 12px;
+
+    }
+    .rangewidth
+    {
+        width: 0%;
+        height: 100%;
+        background-color: #ff4332;
+        border-radius: 5px;
+    }
+    .products-variety
+    {
+        overflow-y: scroll;
+        height: 1410px;
+    }
+    .products-variety::-webkit-scrollbar
+    {
+      width: 3px;
+    }
+    .products-variety::-webkit-scrollbar-thumb
+    {
+        background-color: #d86e64;
+        border-radius: 22px;
+    }
+    .products-variety::-webkit-scrollbar-thumb:hover
+    {
+        background-color: #ff3322;
+        cursor: pointer;
+    }
+
+
+
 
 
 }
@@ -377,6 +834,7 @@
         border: 1px solid rgba(0, 0, 0, 0.1);
         display: flex;
         width: 100%;
+        height: auto;
     }
 
     .aside::-webkit-scrollbar {
@@ -403,6 +861,7 @@
     .side-container {
         background-color: #ecf0f1;
         width: 87%;
+        height: auto;
     }
     .side-container-active
     {
@@ -522,12 +981,12 @@
 
     .today-first-one {
         height: auto;
-        width: 70%;
+        width: 75%;
     }
 
     .today-second-one {
         height: auto;
-        width: 30%;
+        width: 25%;
     }
 
     .first-content {
@@ -545,6 +1004,21 @@
         border: 1px solid rgba(255, 255, 255, 0.3);
         height: auto;
         width: 200px;
+        background-color: #fff;
+        border-radius: 6px;
+        display: flex;
+        padding: 10px;
+    }
+    .countvalue1
+    {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.3px);
+        -webkit-backdrop-filter: blur(0.3px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        height: auto;
+        width: 300px;
         background-color: #fff;
         border-radius: 6px;
         display: flex;
@@ -627,13 +1101,13 @@
     .second-content
     {
         display: flex;
-        height: 400px;
+        height: auto;
         gap: 10px;
     }
     .product-available
     {
-        height: 100px;
-        width: 40%;
+        height: auto;
+        width: 30%;
     }
     .products-det
     {
@@ -649,11 +1123,12 @@
     .products-orders
     {
         width: 100%;
+        height: auto;
     }
 
     /* delivered */
     
-    .delivred-content,.process-content
+    .delivred-content,.process-content,.users
     {
         display: flex;
         flex-direction: column;
@@ -697,6 +1172,190 @@
     {
         color: #ff4332;
     }
+    .main-users
+    {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 10px 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        align-items: center;
+        font-size: 12px;
+    }
+    .userimg img
+    {
+        width: 50px;
+        border-radius: 50%;
+    }
+    .username
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center ;
+        line-height: 5px;
+    }
+    .status-active
+    {
+        color: #2b941d;
+    }
+    .status-inactive
+    {
+        color: #ff4332;
+    }
+    .userimg
+    {
+        width: 20%;
+    }
+    .username
+    {
+        width: 50%;
+    }
+    .total
+    {
+        width: 30%;
+    }
+    .product-container
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .img img
+    {
+        width: 60px;
+    }
+    .product-name
+    {
+        text-transform: uppercase;
+        font-size: 14px;
+        color: #ff4332;
+    }
+    .product-type
+    {
+        color: #554d4d;
+        font-size: 12px;
+    }
+    .products-list
+    {
+       padding: 10px 20px;
+    }
+    .product-details-container
+    {
+        width: 90%;
+
+    }
+    .usernameorder
+    {
+        text-transform: uppercase;
+        font-size: 12px;
+        padding: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+    }
+    .users-product-det
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        gap: 10px;
+    }
+    .products-img-container
+    {
+       width: 10%; 
+    }
+    .products-img-container img
+    {
+        width: 50px;
+        height: 50px;
+        border-radius: 20%;
+        object-fit: cover;
+    }
+    .products-name-detail
+    {
+        width: 100%;
+    }
+    .second-data
+    {
+         border: 1px solid rgba(0, 0, 0, 0.1);
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.3px);
+        -webkit-backdrop-filter: blur(0.3px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        height: auto;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 6px;
+    }
+    .orders-count-details
+    {
+        padding: 20px;
+    }
+    .range-det
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 4px;
+    }
+    .range-name
+    {
+        color: #000;
+        font-size: 12px;
+    }
+    .range-percent
+    {
+        color:#000;
+    }
+    .rangesize
+    {
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        height: 10px;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+    .range
+    {
+        display: flex;
+        flex-direction: column;
+        margin-top: 12px;
+
+    }
+    .rangewidth
+    {
+        width: 0%;
+        height: 100%;
+        background-color: #ff4332;
+        border-radius: 5px;
+    }
+    .products-variety
+    {
+        overflow-y: scroll;
+        height: 1410px;
+    }
+    ::-webkit-scrollbar
+    {
+      width: 3px;
+    }
+    ::-webkit-scrollbar-thumb
+    {
+        background-color: #d86e64;
+        border-radius: 22px;
+    }
+    ::-webkit-scrollbar-thumb:hover
+    {
+        background-color: #ff3322;
+        cursor: pointer;
+    }
+
+
+
 
 
 
