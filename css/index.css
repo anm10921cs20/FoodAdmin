@@ -298,6 +298,7 @@
         width: 100%;
         margin-left: -500px;
         transition: margin-left 1s;
+        z-index: 2000;
     }
 
     .nav-container-active {

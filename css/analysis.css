@@ -112,7 +112,7 @@
         height:103vh;
         background-color: #fff;
         position: fixed;
-        z-index: 2001;
+        z-index: 100;
         overflow: hidden;
         transition: all 1s ease-in-out;
        
