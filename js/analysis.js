@@ -9,6 +9,7 @@ asideBarOpenClose.addEventListener('click', () => {
     asideContainer.classList.toggle('aside-active');
     asideImg.classList.toggle('img-src-inactive');
     sideContainer.classList.toggle('side-container-active')
+    asideBarOpenClose.classList.toggle('fa-close')
 })
 
   const todayBtn = document.getElementsByClassName('today-button')[0];
