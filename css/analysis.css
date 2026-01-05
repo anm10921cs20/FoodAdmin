@@ -343,7 +343,7 @@
     .second-data h1 {
         color: #554d4d;
         font-weight: 100;
-        font-size: 12px;
+        font-size: 15px;
     }
     .second-data-header
     {
@@ -513,6 +513,7 @@
         text-transform: uppercase;
         font-size: 12px;
         padding: 10px;
+        color: #ff3322;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         margin-bottom: 10px;
     }
