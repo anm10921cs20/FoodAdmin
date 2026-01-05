@@ -156,16 +156,11 @@
         padding: 10px;
         align-items: center;
         gap: 23px;
-        color: #000;
+        color: #ff3322;
         transition: all 0.4s;
     }
 
-    .nav-content:hover {
-        background-color: #ff9900;
-        color: #fff;
-        transition: all 0.4s;
-        cursor: pointer;
-    }
+    
 
     .img-src {
         display: flex;
@@ -619,6 +614,7 @@
         background-color: #ff3322;
         cursor: pointer;
     }
+    
 
 
 
