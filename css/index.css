@@ -231,6 +231,7 @@
         padding: 10px;
         position: sticky;
         top: 0;
+        z-index: 2000;
     }
 
     .main-container-header-img img {
@@ -329,7 +330,7 @@
 
     .notification {
         position: fixed;
-        top: 50px;
+        bottom: 20px;
         right: 20px;
         width: 300px;
         height: 100px;
@@ -341,7 +342,7 @@
     .Toast {
         /* From https://css.glass */
         border-radius: 3px;
-        background-color: #ff4343;
+        background-color: #1a922e;
         position: relative;
         padding: 10px;
         color: #fff;

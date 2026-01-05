@@ -7,7 +7,7 @@ db.ref('popularcuisines').get('value').then((responce) => {
         productsContainer.className = 'product-container';
         productsContainer.innerHTML = `<div class="product-container">
                                                     <div class="img">
-                                                        <img src="${item.img}"  alt="">
+                                                        <img src="${item.img}" width="40px"  alt="">
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="product-name">
