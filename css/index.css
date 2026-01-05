@@ -451,6 +451,9 @@
     .admin-main-container {
         background-color: #ff9900;
         padding: 10px;
+        position: sticky;
+        top: 0 ;
+        z-index: 2000;
     }
 
     .main-container-header-img img {
