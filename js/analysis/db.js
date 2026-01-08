@@ -125,6 +125,7 @@ db.ref('userorder/').get('value').then((snapshot) => {
 
 
             const deliveredContainer1 = document.getElementsByClassName('delivred-content')[0];
+
             deliveredContainer1.appendChild(empty);
         }
 
@@ -175,9 +176,17 @@ db.ref('userorder/').get('value').then((snapshot) => {
 
 
             const deliveredContainer3 = document.getElementsByClassName('users')[0];
+            const deliveredContainer13 = document.getElementsByClassName('users1')[0];
+
             const mainUsers = document.getElementsByClassName('main-users')[0];
+            const mainUsers1 = document.getElementsByClassName('main-users')[1];
+
             deliveredContainer3.appendChild(empty);
+            deliveredContainer13.appendChild(empty);
+
             mainUsers.style.display = "none";
+            mainUsers1.style.display = "none";
+
         }
 
 
@@ -186,13 +195,17 @@ db.ref('userorder/').get('value').then((snapshot) => {
             const empty = document.createElement('div');
             empty.className = "empty-container";
             empty.innerHTML = `
-        <div>No Orders Found</div>
+        <div class="no-order">No Orders Found</div>
         `
 
 
         
             const mainUsers1 = document.getElementsByClassName('products-variety')[0];
+            const mainUsers2 = document.getElementsByClassName('products-variety1')[0];
+
             mainUsers1.appendChild(empty);
+            mainUsers2.appendChild(empty);
+
           
         }
     
