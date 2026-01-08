@@ -97,7 +97,7 @@ db.ref('userorder/').get('value').then((snapshot) => {
         }
 
     filterProcess.forEach((item, id) => {
-        processCart(item, id)
+        processCart1(item, id)
     })
 
 
@@ -134,7 +134,7 @@ db.ref('userorder/').get('value').then((snapshot) => {
     filterDeliver.forEach((price, id) => {
         const totalprice = price.datavalue.total.ToPay;
         revenueDeliver = revenueDeliver + totalprice;
-        deliverCart(price)
+        deliverCart1(price)
 
     })
     RevenueElement.textContent = "Rs." + revenueDeliver;
@@ -229,7 +229,7 @@ db.ref('userorder/').get('value').then((snapshot) => {
 
 
 
-function deliverCart(price) {
+function deliverCart1(price) {
     const deliverContainer = price;
     const dataid = price.dataid;
 
@@ -289,7 +289,7 @@ function deliverCart(price) {
 }
 
 
-function processCart(item, id) {
+function processCart1(item, id) {
 
 
     const process = item;
