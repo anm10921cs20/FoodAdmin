@@ -16,7 +16,8 @@ db.ref('userorder/').get('value').then((snapshot) => {
     user = usersArray.length;
     const userValue = user <= 9 ? `0${user}` : user;
     userElement.textContent = userValue;
-
+    const currentUser = document.getElementById('activeusers');
+    currentUser.textContent = userValue;
     const userwidth = document.getElementById('userwidth');
     const userpercent = document.getElementById('userpercent');
     userwidth.style.width = `${userValue}%`
@@ -176,16 +177,16 @@ db.ref('userorder/').get('value').then((snapshot) => {
 
 
             const deliveredContainer3 = document.getElementsByClassName('users')[0];
-            const deliveredContainer13 = document.getElementsByClassName('users1')[0];
+          
 
             const mainUsers = document.getElementsByClassName('main-users')[0];
-            const mainUsers1 = document.getElementsByClassName('main-users')[1];
-
+         
             deliveredContainer3.appendChild(empty);
-            deliveredContainer13.appendChild(empty);
+           
+         
 
             mainUsers.style.display = "none";
-            mainUsers1.style.display = "none";
+           
 
         }
 
@@ -201,10 +202,9 @@ db.ref('userorder/').get('value').then((snapshot) => {
 
         
             const mainUsers1 = document.getElementsByClassName('products-variety')[0];
-            const mainUsers2 = document.getElementsByClassName('products-variety1')[0];
-
+          
             mainUsers1.appendChild(empty);
-            mainUsers2.appendChild(empty);
+      
 
           
         }

@@ -1,0 +1,768 @@
+/* sm mobiles */
+@media only screen and (min-width:199px) and (max-width:399px) {
+     .users-data-container {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        width: 100%;
+    }
+
+    .first-contents {
+        width: 70%;
+        gap: 10px;
+    }
+
+    .user-datas {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        height: auto;
+    }
+
+    .content-user {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.3px);
+        -webkit-backdrop-filter: blur(0.3px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        height: 100px;
+        width: 250px;
+        background-color: #fff;
+        border-radius: 6px;
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .user-details {
+        display: flex;
+        width: 30%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .email-users2-container,.second-data-header {
+
+        width: 250px;
+        background-color: #fff;
+        height: auto;
+        overflow: hidden;
+    }
+  
+
+    .email-user-cont {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        width: 100%;
+    }
+      .email-user-cont1 {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        width: 200%;
+    }
+
+    .email-user-img img {
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    .email-user-status {
+        color: #329c1c;
+    }
+
+    .email-user-img {
+        width: 20%;
+    }
+
+    .email-user-details {
+        width: 60%;
+    }
+
+    .email-user-status {
+        width: 15%;
+        text-align: end;
+    }
+
+    .user-details-container {
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.3px);
+        -webkit-backdrop-filter: blur(0.3px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        height: auto;
+        overflow-y: auto;
+        width: 250px;
+        background-color: #fff;
+        border-radius: 6px;
+        padding: 10px;
+        
+    }
+    
+    .user-details-container::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+    }
+
+    .user-details-container::-webkit-scrollbar-thumb {
+        background-color: #d86e64;
+        border-radius: 22px;
+    }
+
+    .user-details-container::-webkit-scrollbar-thumb:hover {
+        background-color: #ff3322;
+        cursor: pointer;
+    }
+      .email-user-img1 img {
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    .email-user-status1 {
+        color: #329c1c;
+    }
+
+    .email-user-img1 {
+        width: 10%;
+    }
+
+    .email-user-details1 {
+        width: 35%;
+    }
+    .email-user-address1
+    {
+        width: 35%;
+    }
+
+    .email-user-status1 {
+        width: 15%;
+        text-align: end;
+    }
+
+  
+}
+
+/* lg mobiles and sm tablets */
+@media only screen and (min-width:400px) and (max-width:767px) {
+ .users-data-container {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        width: 100%;
+    }
+
+    .first-contents {
+        width: 70%;
+        gap: 10px;
+    }
+
+    .user-datas {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        height: auto;
+    }
+
+    .content-user {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.3px);
+        -webkit-backdrop-filter: blur(0.3px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        height: 100px;
+        width: 320px;
+        background-color: #fff;
+        border-radius: 6px;
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .user-details {
+        display: flex;
+        width: 30%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .email-users2-container,.second-data-header {
+
+        width: 320px;
+        background-color: #fff;
+        height: auto;
+    }
+  
+
+    .email-user-cont {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        width: 100%;
+    }
+      .email-user-cont1 {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        width: 200%;
+    }
+
+    .email-user-img img {
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    .email-user-status {
+        color: #329c1c;
+    }
+
+    .email-user-img {
+        width: 20%;
+    }
+
+    .email-user-details {
+        width: 60%;
+    }
+
+    .email-user-status {
+        width: 15%;
+        text-align: end;
+    }
+
+    .user-details-container {
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.3px);
+        -webkit-backdrop-filter: blur(0.3px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        height: auto;
+        overflow-y: auto;
+        width: 320px;
+        background-color: #fff;
+        border-radius: 6px;
+        padding: 10px;
+        
+    }
+    
+    .user-details-container::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+    }
+
+    .user-details-container::-webkit-scrollbar-thumb {
+        background-color: #d86e64;
+        border-radius: 22px;
+    }
+
+    .user-details-container::-webkit-scrollbar-thumb:hover {
+        background-color: #ff3322;
+        cursor: pointer;
+    }
+      .email-user-img1 img {
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    .email-user-status1 {
+        color: #329c1c;
+    }
+
+    .email-user-img1 {
+        width: 10%;
+    }
+
+    .email-user-details1 {
+        width: 35%;
+    }
+    .email-user-address1
+    {
+        width: 35%;
+    }
+
+    .email-user-status1 {
+        width: 15%;
+        text-align: end;
+    }
+
+  
+
+
+
+
+}
+
+/* md tablets and sm laptops */
+@media only screen and (min-width:768px) and (max-width:1023px) {
+     .users-data-container {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        width: 100%;
+    }
+
+    .first-contents {
+        width: 70%;
+        gap: 10px;
+    }
+
+    .user-datas {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        height: auto;
+    }
+
+    .content-user {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.3px);
+        -webkit-backdrop-filter: blur(0.3px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        height: 100px;
+        width: 630px;
+        background-color: #fff;
+        border-radius: 6px;
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .user-details {
+        display: flex;
+        width: 30%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .email-users2-container,.second-data-header {
+
+        width: 300%;
+        background-color: #fff;
+        height: auto;
+    }
+  
+
+    .email-user-cont {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        width: 100%;
+    }
+      .email-user-cont1 {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        width: 200%;
+    }
+
+    .email-user-img img {
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    .email-user-status {
+        color: #329c1c;
+    }
+
+    .email-user-img {
+        width: 20%;
+    }
+
+    .email-user-details {
+        width: 60%;
+    }
+
+    .email-user-status {
+        width: 15%;
+        text-align: end;
+    }
+
+    .user-details-container {
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.3px);
+        -webkit-backdrop-filter: blur(0.3px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        height: auto;
+        overflow-y: auto;
+        width: 128%;
+        background-color: #fff;
+        border-radius: 6px;
+        padding: 10px;
+        
+    }
+    
+    .user-details-container::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+    }
+
+    .user-details-container::-webkit-scrollbar-thumb {
+        background-color: #d86e64;
+        border-radius: 22px;
+    }
+
+    .user-details-container::-webkit-scrollbar-thumb:hover {
+        background-color: #ff3322;
+        cursor: pointer;
+    }
+      .email-user-img1 img {
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    .email-user-status1 {
+        color: #329c1c;
+    }
+
+    .email-user-img1 {
+        width: 10%;
+    }
+
+    .email-user-details1 {
+        width: 35%;
+    }
+    .email-user-address1
+    {
+        width: 35%;
+    }
+
+    .email-user-status1 {
+        width: 15%;
+        text-align: end;
+    }
+
+  
+}
+
+/* md laptops and sm desktops */
+@media only screen and (min-width:1024px) and (max-width:1439px) {
+ .users-data-container {
+        padding: 10px;
+        display: flex;
+        gap: 10px;
+        height: auto;
+    }
+
+    .first-contents {
+        width: 70%;
+        gap: 10px;
+    }
+
+    .user-datas {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 10px;
+        height: 100px;
+    }
+
+    .content-user {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.3px);
+        -webkit-backdrop-filter: blur(0.3px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        height: 100px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 6px;
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .user-details {
+        display: flex;
+        width: 30%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .email-users-container {
+        padding: 10px;
+    }
+
+    .email-user-cont {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+        font-size: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+     .email-user-cont1 {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .email-user-img img {
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    .email-user-status {
+        color: #329c1c;
+    }
+
+    .email-user-img {
+        width: 20%;
+    }
+
+    .email-user-details {
+        width: 60%;
+    }
+
+    .email-user-status {
+        width: 15%;
+        text-align: end;
+    }
+
+    .user-details-container {
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.3px);
+        -webkit-backdrop-filter: blur(0.3px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        height: 1430px;
+        overflow-y: auto;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 6px;
+        padding: 10px;
+        font-size: 12px;
+        
+    }
+    
+    .user-details-container::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    .user-details-container::-webkit-scrollbar-thumb {
+        background-color: #d86e64;
+        border-radius: 22px;
+    }
+
+    .user-details-container::-webkit-scrollbar-thumb:hover {
+        background-color: #ff3322;
+        cursor: pointer;
+    }
+      .email-user-img1 img {
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    .email-user-status1 {
+        color: #329c1c;
+    }
+
+    .email-user-img1 {
+        width: 15%;
+    }
+
+    .email-user-details1 {
+        width: 35%;
+    }
+    .email-user-address1
+    {
+        width: 35%;
+    }
+
+    .email-user-status1 {
+        width: 15%;
+        text-align: end;
+    }
+
+  
+
+
+}
+
+/* lg desktops and 4k */
+
+@media only screen and (min-width:1440px) and (max-width:2160px) {
+    .users-data-container {
+        padding: 10px;
+        display: flex;
+        gap: 10px;
+        height: auto;
+    }
+
+    .first-contents {
+        width: 70%;
+        gap: 10px;
+    }
+
+    .user-datas {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 10px;
+        height: 100px;
+    }
+
+    .content-user {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.3px);
+        -webkit-backdrop-filter: blur(0.3px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        height: 100px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 6px;
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .user-details {
+        display: flex;
+        width: 30%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .email-users-container {
+        padding: 10px;
+    }
+
+    .email-user-cont {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+     .email-user-cont1 {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .email-user-img img {
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    .email-user-status {
+        color: #329c1c;
+    }
+
+    .email-user-img {
+        width: 20%;
+    }
+
+    .email-user-details {
+        width: 60%;
+    }
+
+    .email-user-status {
+        width: 15%;
+        text-align: end;
+    }
+
+    .user-details-container {
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.3px);
+        -webkit-backdrop-filter: blur(0.3px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        height: 1430px;
+        overflow-y: auto;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 6px;
+        padding: 10px;
+        
+    }
+    
+    .user-details-container::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    .user-details-container::-webkit-scrollbar-thumb {
+        background-color: #d86e64;
+        border-radius: 22px;
+    }
+
+    .user-details-container::-webkit-scrollbar-thumb:hover {
+        background-color: #ff3322;
+        cursor: pointer;
+    }
+      .email-user-img1 img {
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    .email-user-status1 {
+        color: #329c1c;
+    }
+
+    .email-user-img1 {
+        width: 15%;
+    }
+
+    .email-user-details1 {
+        width: 35%;
+    }
+    .email-user-address1
+    {
+        width: 35%;
+    }
+
+    .email-user-status1 {
+        width: 15%;
+        text-align: end;
+    }
+
+  
+
+
+
+
+
+}

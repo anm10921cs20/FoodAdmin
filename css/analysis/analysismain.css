@@ -22,3 +22,49 @@
 {
     display: none;
 }
+
+
+/* sm mobiles */
+@media only screen and (min-width:199px) and (max-width:399px) {
+         .users-container
+{
+    padding-left: 60px;
+    height: auto;
+}
+}
+/* lg mobiles and sm tablets */
+@media only screen and (min-width:400px) and (max-width:767px) {
+     .users-container
+{
+    padding-left: 60px;
+    height: auto;
+}
+}
+
+/* md tablets and sm laptops */
+@media only screen and (min-width:768px) and (max-width:1023px) {
+         .users-container
+{
+    padding-left: 90px;
+    height: auto;
+}
+}
+
+/* md laptops and sm desktops */
+@media only screen and (min-width:1024px) and (max-width:1439px) {
+         .users-container
+{
+    padding-left: 60px;
+    height: auto;
+}
+}
+
+/* lg desktops and 4k */
+
+@media only screen and (min-width:1440px) and (max-width:2160px) {
+   .users-container
+{
+    padding-left: 20px;
+    height: auto;
+}
+}

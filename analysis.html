@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/analysis.css">
     <link rel="stylesheet" href="./css/analysis/analysismain.css">
+    <link rel="stylesheet" href="./css/analysis/users.css">
 
 
 
@@ -612,7 +613,172 @@
             <!-- users started -->
 
             <div class="users-container">
-                users
+                <div class="dashboard-header">
+                    <div class="main-text-header">
+                        <h1 class="dashboard-text">Users</h1>
+                        <p class="today-det">All The Customer Details Here</p>
+                    </div>
+                </div>
+                <div class="users-data-container">
+                    <!-- first content -->
+                    <div class="first-contents">
+                        <div class="user-datas">
+                            <div class="content-user">
+                                <div class="first-value">
+                                    <h1>Active Users</h1>
+                                    <p class="count" id="activeusers">0</p>
+                                    <p class="name">Google Email</p>
+                                </div>
+                                <div class="second-value">
+                                    <i class="fa-solid fa-users"></i>
+                                </div>
+                            </div>
+                            <div class="content-user">
+                                <div class="first-value">
+                                    <h1>Total Users</h1>
+                                    <p class="count" id="totalusers">0</p>
+                                    <p class="name">Google Email</p>
+                                </div>
+                                <div class="second-value">
+                                    <i class="fa-solid fa-users"></i>
+                                </div>
+                            </div>
+                            <div class="content-user">
+                                <div class="first-value">
+                                    <h1>Mail Users</h1>
+                                    <p class="count" id="mailusers">0</p>
+                                    <p class="name">Email</p>
+                                </div>
+                                <div class="second-value">
+                                    <i class="fa-solid fa-users"></i>
+                                </div>
+                            </div>
+                            <div class="content-user">
+                                <div class="first-value">
+                                    <h1> Google Users</h1>
+                                    <p class="count" id="googleusers">0</p>
+                                    <p class="name">Google</p>
+                                </div>
+                                <div class="second-value">
+                                    <i class="fa-solid fa-users"></i>
+                                </div>
+                            </div>
+                        </div><br>
+                        <div class="user-details-container">
+                            <div class="email-users1-container">
+                                <div class="active-users">
+                                    <h5>Current Users</h5>
+                                    <div class="active-users-container">
+                                        <div class="active-users-det">
+                                            <div class="email-user-cont1">
+                                                <div class="email-user-img1 fw-bold">
+                                                    Profile
+                                                </div>
+                                                <div class="email-user-details1 fw-bold">
+                                                    User Details
+                                                </div>
+                                                <div class="email-user-address1 fw-bold">
+                                                    User Address
+                                                </div>
+                                                <div class="email-user-statu fw-bold">
+                                                    User Status
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- second content -->
+                    <div class="user-details">
+                        <div class="second-data">
+                            <div class="second-data-header">
+                                <img src="./images/icons/gmail.png" width="30px" alt="">
+                                <h1>Email Users</h1>
+                            </div>
+                            <div class="second-data-det">
+                                <div class="email-users2-container">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="second-data">
+                            <div class="second-data-header">
+                                <img src="./images/icons/google.png" width="30px" alt="">
+                                <h1>Google User</h1>
+                            </div>
+                            <div class="second-data-det">
+                                <div class="email-users2-container">
+
+                                </div>
+                            </div>
+                        </div>
+                         <div class="second-data">
+                            <div class="second-data-header">
+                                <img src="./images/icons/statistics.png" width="30px" alt="">
+                                <h1>Users Static Data</h1>
+                            </div>
+                            <div class="second-data-det">
+                                   <div class="orders-count-details">
+                                            <div class="range">
+                                                <div class="rangesize">
+                                                    <div class="rangewidth" id="userwidth"></div>
+                                                </div>
+                                                <div class="range-det">
+                                                    <div class="range-name">Active Users</div>
+                                                    <div class="range-percent" id="userpercent">0%</div>
+                                                </div>
+                                            </div>
+                                            <div class="range">
+                                                <div class="rangesize">
+                                                    <div class="rangewidth" id="torderswidth"></div>
+                                                </div>
+                                                <div class="range-det">
+                                                    <div class="range-name">Today Users</div>
+                                                    <div class="range-percent" id="torderspercent">0%</div>
+                                                </div>
+                                            </div>
+                                            <div class="range">
+                                                <div class="rangesize">
+                                                    <div class="rangewidth" id="todeliverwidth"></div>
+                                                </div>
+                                                <div class="range-det">
+                                                    <div class="range-name">Email Users</div>
+                                                    <div class="range-percent" id="todeliverpercent">0%</div>
+                                                </div>
+                                            </div>
+                                            <div class="range">
+                                                <div class="rangesize">
+                                                    <div class="rangewidth" id="revenuewidth"></div>
+                                                </div>
+                                                <div class="range-det">
+                                                    <div class="range-name">Google Users</div>
+                                                    <div class="range-percent" id="revenuepercent">0%</div>
+                                                </div>
+                                            </div>
+                                          
+                                        </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
             </div>
 
             <!-- users complete -->
@@ -684,7 +850,7 @@
 
         </div>
         <!-- side container end -->
-    </div>  
+    </div>
     <!-- main container end -->
 
 
@@ -724,6 +890,8 @@
 <script src="./js/analysis/db.js"></script>
 <script src="./js/analysis/user.js"></script>
 <script src="./js/analysis/products.js"></script>
+<script src="./js/analysis/users/users.js"></script>
+<script src="./js/analysis/users/usersdb.js"></script>
 
 <!-- second data alltime details -->
 
