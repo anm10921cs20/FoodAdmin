@@ -25,6 +25,10 @@ firestore.collection('client/').get().then((user) => {
         const userpercent = document.getElementById('userpercent1');
         userwidth.style.width = `${alltimeUser}%`
         userpercent.textContent = alltimeUser + '%'
+         const userwidth1 = document.getElementById('touserswidth');
+        const userpercent1 = document.getElementById('touserspercent');
+        userwidth1.style.width = `${alltimeUser}%`
+        userpercent1.textContent = alltimeUser + '%'
 
     })
 

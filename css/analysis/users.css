@@ -150,6 +150,15 @@
         width: 15%;
         text-align: end;
     }
+      .active-users-statistics
+    {
+        width: 100%;
+    }
+    .active-users-data
+    {
+        width:320px;
+        padding: 10px;
+    }
 
   
 }
@@ -305,7 +314,19 @@
         width: 15%;
         text-align: end;
     }
-
+    .active-users-statistics
+    {
+        width: 100%;
+    }
+      .active-users-statistics
+    {
+        width: 100%;
+    }
+    .active-users-data
+    {
+        width:100%;
+        padding: 10px;
+    }
   
 
 
@@ -464,6 +485,15 @@
         width: 15%;
         text-align: end;
     }
+      .active-users-statistics
+    {
+        width: 100%;
+    }
+    .active-users-data
+    {
+        width:300%;
+        padding: 10px;
+    }
 
   
 }
@@ -610,6 +640,12 @@
         width: 15%;
         text-align: end;
     }
+       .active-users-data
+    {
+        width:100%;
+        padding: 10px;
+    }
+
 
   
 
@@ -757,6 +793,11 @@
     .email-user-status1 {
         width: 15%;
         text-align: end;
+    }
+     .active-users-data
+    {
+        width:100%;
+        padding: 10px;
     }
 
   

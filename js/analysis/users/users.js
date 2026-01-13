@@ -73,6 +73,11 @@ function userConceptData(userObject, emailCount) {
 
    const mailCountElement = document.getElementById('mailusers');
    mailCountElement.textContent = roundZero(emailCount);
+    const userwidth = document.getElementById('emailuserwidth');
+        const userpercent = document.getElementById('emailuserpercent');
+        userwidth.style.width = `${emailCount}%`
+        userpercent.textContent = emailCount + '%'
+
 
 }
 
@@ -107,6 +112,10 @@ function  userConceptGoogle(userObject, googleCount)
    googleCount = googleCount + userdataEmailElement.children.length;
    const gogleMailCountElement = document.getElementById('googleusers');
    gogleMailCountElement.textContent = roundZero(googleCount);
+    const userwidth = document.getElementById('googleuserwidth');
+        const userpercent = document.getElementById('googleuserpercent');
+        userwidth.style.width = `${googleCount}%`
+        userpercent.textContent = googleCount + '%'
    
     
 }
