@@ -10,7 +10,7 @@ firestore.collection('client').get().then((responce) => {
             user,
             userData
         }
-        userConcept(userObject)
+        userConcept1(userObject)
     });
 
 })
@@ -25,14 +25,14 @@ firestore.collection('gmailClient').get().then((responce) => {
             googleUser,
             googleUserData
         }
-        googleUserConcept(googleUserObject)
+        googleUserConcept1(googleUserObject)
     })
 })
 
 
 // user object function 
 
-function userConcept(userObject) {
+function userConcept1(userObject) {
 
     db.ref('userorder/' + userObject.userData.name + userObject.user).get('value').then((responce) => {
         const userOrder = responce.val();
@@ -46,7 +46,7 @@ function userConcept(userObject) {
                 userOrderId,
                 userOrderData
             }
-            usernormalpush(userOrderObject, userObject);
+            usernormalpush1(userOrderObject, userObject);
 
         })
 
@@ -56,7 +56,7 @@ function userConcept(userObject) {
 
 // google user concpt
 
-function googleUserConcept(googleUserObject) {
+function googleUserConcept1(googleUserObject) {
 
 
     db.ref('userorder/' + googleUserObject.googleUserData.displayName + googleUserObject.googleUser).get('value').then((responce) => {
@@ -71,7 +71,7 @@ function googleUserConcept(googleUserObject) {
                 userOrderId,
                 userOrderData
             }
-            userPush(userOrderObject, googleUserObject);
+            userPush1(userOrderObject, googleUserObject);
 
         })
 
@@ -82,7 +82,7 @@ function googleUserConcept(googleUserObject) {
 
 
 
-function userPush(userOrderObject, googleUserConcept) {
+function userPush1(userOrderObject, googleUserConcept) {
 
     if (userOrderObject.userOrderData.date === new Date().toLocaleDateString()) {
 
@@ -119,7 +119,7 @@ function userPush(userOrderObject, googleUserConcept) {
                                                     Rs.${userOrderObject.userOrderData.total.ToPay}
                                                 </div>
     `;
-        const userData = document.getElementsByClassName('users')[0];
+        const userData = document.getElementsByClassName('userrevenue')[0];
       
 
         userData.appendChild(orderUser)
@@ -133,8 +133,7 @@ function userPush(userOrderObject, googleUserConcept) {
         Customer Name: ${userOrderObject.userOrderData.username}
         </div>
         `;
-        const productVariety = document.getElementsByClassName('products-variety')[0];
-        productVariety.appendChild(productorder)
+      
 
         const foodOrderData = userOrderObject.userOrderData.food;
         foodOrderData.forEach((data, id) => {
@@ -213,7 +212,7 @@ ${userOrderObject.userOrderData.isOrderStatus === false ? "Proccess" : "Delivere
                                                     Rs.${userOrderObject.userOrderData.total.ToPay}
                                                 </div>
     `;
-        const userData = document.getElementsByClassName('users1')[0];
+       const userData = document.getElementsByClassName('userrevenue')[1];
         userData.appendChild(orderUser)
 
 
@@ -224,8 +223,7 @@ ${userOrderObject.userOrderData.isOrderStatus === false ? "Proccess" : "Delivere
         Customer Name: ${userOrderObject.userOrderData.username}
         </div>
         `;
-        const productVariety = document.getElementsByClassName('products-variety1')[0];
-        productVariety.appendChild(productorder)
+        
 
         const foodOrderData = userOrderObject.userOrderData.food;
         foodOrderData.forEach((data, id) => {
@@ -266,7 +264,7 @@ ${userOrderObject.userOrderData.isOrderStatus === false ? "Proccess" : "Delivere
 
 
 
-function usernormalpush(userOrderObject, userObject) {
+function usernormalpush1(userOrderObject, userObject) {
 
     if (userOrderObject.userOrderData.date === new Date().toLocaleDateString()) {
 
@@ -304,7 +302,7 @@ function usernormalpush(userOrderObject, userObject) {
                                                     Rs.${userOrderObject.userOrderData.total.ToPay}
                                                 </div>
     `;
-        const userData = document.getElementsByClassName('users')[0];
+      const userData = document.getElementsByClassName('userrevenue')[0];
         userData.appendChild(orderUser)
 
 
@@ -317,8 +315,7 @@ function usernormalpush(userOrderObject, userObject) {
         Customer Name: ${userOrderObject.userOrderData.username}
         </div>
         `;
-        const productVariety = document.getElementsByClassName('products-variety')[0];
-        productVariety.appendChild(productorder)
+        
 
 
 
@@ -395,7 +392,7 @@ ${userOrderObject.userOrderData.isOrderStatus === false ? "Proccess" : "Delivere
                                                     Rs.${userOrderObject.userOrderData.total.ToPay}
                                                 </div>
     `;
-        const userData = document.getElementsByClassName('users1')[0];
+        const userData = document.getElementsByClassName('userrevenue')[1];
         userData.appendChild(orderUser)
 
 

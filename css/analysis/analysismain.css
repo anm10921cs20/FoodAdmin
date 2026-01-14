@@ -67,4 +67,41 @@
     padding-left: 20px;
     height: auto;
 }
+.revenue-container
+{
+   padding-left: 20px;
+   padding-right:20px ;
+   height: auto;
+}
+.userrevenue
+{
+    height: 1100px;
+    overflow-y: scroll;
+}
+.userrevenue::-webkit-scrollbar
+{
+    width: 2px;
+}
+.userrevenue::-webkit-scrollbar-thumb
+{
+    background-color: #ff4343;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -45,6 +45,61 @@ alltimeBtn.addEventListener('click', () => {
   createToast(type, icon, title, text)
 })
 
+
+const todayBtnRevenue = document.getElementsByClassName('today-button')[1];
+const alltimeBtnRevenue = document.getElementsByClassName('alltime-button')[1];
+const todayContainerRevenue = document.getElementsByClassName('today-container')[1];
+const alltimeContainerRevenue = document.getElementsByClassName('alltime-container')[1];
+
+todayBtnRevenue.addEventListener('click', () => {
+  alltimeBtnRevenue.classList.remove('btns-active');
+  todayBtnRevenue.classList.add('btns-active');
+  todayContainerRevenue.style.display = "block";
+  alltimeContainerRevenue.style.display = "none";
+  let type = "success"
+  let icon = "fa-solid fa-circle-check";
+  let title = "Today";
+  let text = "All the Today Revenue Reports"
+
+  createToast(type, icon, title, text)
+
+})
+alltimeBtnRevenue.addEventListener('click', () => {
+  todayBtnRevenue.classList.remove('btns-active');
+  alltimeBtnRevenue.classList.add('btns-active');
+  todayContainerRevenue.style.display = "none";
+  alltimeContainerRevenue.style.display = "block"
+
+  let type = "success"
+  let icon = "fa-solid fa-circle-check";
+  let title = "All Time";
+  let text = "Alltime Revenue Reports Here"
+
+  createToast(type, icon, title, text)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // button
 const dashboard = document.getElementsByClassName('nav-content')[0];
 const users = document.getElementsByClassName('nav-content')[1];

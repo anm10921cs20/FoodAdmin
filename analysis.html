@@ -668,6 +668,9 @@
                             <div class="email-users1-container">
                                 <div class="active-users">
                                     <h5>Current Users</h5>
+                                    <div class="search-input-user">
+                                        <input type="text" id="searchuser" placeholder="Search User...">
+                                    </div><br>
                                     <div class="active-users-container">
                                         <div class="active-users-det">
                                             <div class="email-user-cont1">
@@ -727,51 +730,51 @@
                                 </div>
                             </div>
                         </div>
-                         <div class="second-data">
+                        <div class="second-data">
                             <div class="second-data-header">
                                 <img src="./images/icons/statistics.png" width="30px" alt="">
                                 <h1>Users Static Data</h1>
                             </div>
                             <div class="second-data active-users-data">
-                                   <div class=" active-users-statistics">
-                                            <div class="range">
-                                                <div class="rangesize">
-                                                    <div class="rangewidth" id="useractivewidth"></div>
-                                                </div>
-                                                <div class="range-det">
-                                                    <div class="range-name">Active Users</div>
-                                                    <div class="range-percent" id="useractivepercent">0%</div>
-                                                </div>
-                                            </div>
-                                            <div class="range">
-                                                <div class="rangesize">
-                                                    <div class="rangewidth" id="touserswidth"></div>
-                                                </div>
-                                                <div class="range-det">
-                                                    <div class="range-name">Total Users</div>
-                                                    <div class="range-percent" id="touserspercent">0%</div>
-                                                </div>
-                                            </div>
-                                            <div class="range">
-                                                <div class="rangesize">
-                                                    <div class="rangewidth" id="emailuserwidth"></div>
-                                                </div>
-                                                <div class="range-det">
-                                                    <div class="range-name">Email Users</div>
-                                                    <div class="range-percent" id="emailuserpercent">0%</div>
-                                                </div>
-                                            </div>
-                                            <div class="range">
-                                                <div class="rangesize">
-                                                    <div class="rangewidth" id="googleuserwidth"></div>
-                                                </div>
-                                                <div class="range-det">
-                                                    <div class="range-name">Google Users</div>
-                                                    <div class="range-percent" id="googleuserpercent">0%</div>
-                                                </div>
-                                            </div>
-                                          
+                                <div class=" active-users-statistics">
+                                    <div class="range">
+                                        <div class="rangesize">
+                                            <div class="rangewidth" id="useractivewidth"></div>
                                         </div>
+                                        <div class="range-det">
+                                            <div class="range-name">Active Users</div>
+                                            <div class="range-percent" id="useractivepercent">0%</div>
+                                        </div>
+                                    </div>
+                                    <div class="range">
+                                        <div class="rangesize">
+                                            <div class="rangewidth" id="touserswidth"></div>
+                                        </div>
+                                        <div class="range-det">
+                                            <div class="range-name">Total Users</div>
+                                            <div class="range-percent" id="touserspercent">0%</div>
+                                        </div>
+                                    </div>
+                                    <div class="range">
+                                        <div class="rangesize">
+                                            <div class="rangewidth" id="emailuserwidth"></div>
+                                        </div>
+                                        <div class="range-det">
+                                            <div class="range-name">Email Users</div>
+                                            <div class="range-percent" id="emailuserpercent">0%</div>
+                                        </div>
+                                    </div>
+                                    <div class="range">
+                                        <div class="rangesize">
+                                            <div class="rangewidth" id="googleuserwidth"></div>
+                                        </div>
+                                        <div class="range-det">
+                                            <div class="range-name">Google Users</div>
+                                            <div class="range-percent" id="googleuserpercent">0%</div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
 
@@ -795,61 +798,262 @@
             <!-- revenue started -->
 
             <div class="revenue-container">
-                revenue
+                <div class="main-revenue-contaiener">
+                    <div class="dashboard-header">
+                        <div class="main-text-header">
+                            <h1 class="dashboard-text">Revenue</h1>
+                            <p class="today-det">All The Revenue Reports Here</p>
+                        </div>
+                        <div class="dayButton">
+                            <button class="btns today-button btns-active"><i class="fa-solid fa-calendar-day"></i>
+                                Today</button>
+                            <button type="button" class="btns alltime-button"><i class="fa-solid fa-calendar-week"></i>
+                                All
+                                Time</button>
+                        </div>
+                    </div>
+                    <div class="today-container">
+                        <div class="users-data-container">
+                            <!-- first content -->
+                            <!-- first content -->
+                            <div class="first-contents">
+                                <div class="user-datas">
+                                    <div class="content-user">
+                                        <div class="first-value">
+                                            <h1>Today Revenue</h1>
+                                            <p class="count" id="todayrevenue">0</p>
+                                            <p class="name">Include All Taxes</p>
+                                        </div>
+                                        <div class="second-value">
+                                            <i class="fa-solid fa-chart-line"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content-user">
+                                        <div class="first-value">
+                                            <h1>Proudct Price</h1>
+                                            <p class="count" id="productprice">0</p>
+                                            <p class="name">Items Price</p>
+                                        </div>
+                                        <div class="second-value">
+                                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content-user">
+                                        <div class="first-value">
+                                            <h1>GST Tax</h1>
+                                            <p class="count" id="gstbill">0</p>
+                                            <p class="name">GST Tax</p>
+                                        </div>
+                                        <div class="second-value">
+                                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content-user">
+                                        <div class="first-value">
+                                            <h1> Platform Charges</h1>
+                                            <p class="count" id="Platfromfee">0</p>
+                                            <p class="name">Platfrom Fee</p>
+                                        </div>
+                                        <div class="second-value">
+                                            <i class="fa-solid fa-dollar-sign"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content-user">
+                                        <div class="first-value">
+                                            <h1> Delivery Charges</h1>
+                                            <p class="count" id="deliverycharges">0</p>
+                                            <p class="name">Delivery Charges</p>
+                                        </div>
+                                        <div class="second-value">
+                                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                                        </div>
+                                    </div>
+                                </div><br>
+                                <div class="reports-analytics">
+                                    <div class="reports-analytics-header">
+                                        <img src="./images/icons/statistics.png" width="30px" alt="">
+                                        <h1>Revenue Analytics</h1>
+                                    </div>
+                                    <br>
+                                    <div class="analysis-container-details">
+                                    
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- second content -->
+                            <div class="user-details">
+                                <div class="second-data">
+                                    <div class="second-data-header">
+                                        <img src="./images/icons/commercial (1).png" width="30px" alt="">
+                                        <h1>Recent Users Orders</h1>
+                                    </div>
+                                    <div class="second-data-det">
+                                        <div class="users userrevenue">
+                                            <div class="main-users">
+                                                <div class="userimg">
+                                                    Users
+                                                </div>
+                                                <div class="username">
+                                                    User Details
+                                                </div>
+                                                <div class="total">
+                                                    Order Amount
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="alltime-container">
+                    <div class="users-data-container">
+                        <!-- first content -->
+                        <!-- first content -->
+                        <div class="first-contents">
+                            <div class="user-datas">
+                                <div class="content-user">
+                                    <div class="first-value">
+                                        <h1>Today Revenue</h1>
+                                        <p class="count" id="alltime">0</p>
+                                        <p class="name">Include All Taxes</p>
+                                    </div>
+                                    <div class="second-value">
+                                        <i class="fa-solid fa-chart-line"></i>
+                                    </div>
+                                </div>
+                                <div class="content-user">
+                                    <div class="first-value">
+                                        <h1>Proudct Price</h1>
+                                        <p class="count" id="productpriceall">0</p>
+                                        <p class="name">Items Price</p>
+                                    </div>
+                                    <div class="second-value">
+                                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                                    </div>
+                                </div>
+                                <div class="content-user">
+                                    <div class="first-value">
+                                        <h1>GST Tax</h1>
+                                        <p class="count" id="allgstbill">0</p>
+                                        <p class="name">GST Tax</p>
+                                    </div>
+                                    <div class="second-value">
+                                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                                    </div>
+                                </div>
+                                <div class="content-user">
+                                    <div class="first-value">
+                                        <h1> Platform Charges</h1>
+                                        <p class="count" id="allplatfromfee">0</p>
+                                        <p class="name">Platfrom Fee</p>
+                                    </div>
+                                    <div class="second-value">
+                                        <i class="fa-solid fa-dollar-sign"></i>
+                                    </div>
+                                </div>
+                                <div class="content-user">
+                                    <div class="first-value">
+                                        <h1> Delivery Charges</h1>
+                                        <p class="count" id="alldeliverycharges">0</p>
+                                        <p class="name">Delivery Charges</p>
+                                    </div>
+                                    <div class="second-value">
+                                        <i class="fa-solid fa-money-bill-trend-up"></i>
+                                    </div>
+                                </div>
+                            </div><br>
+
+                        </div>
+                        <!-- second content -->
+                        <div class="user-details">
+                            <div class="second-data">
+                                <div class="second-data-header">
+                                    <img src="./images/icons/commercial (1).png" width="30px" alt="">
+                                    <h1>Recent Users Orders</h1>
+                                </div>
+                                <div class="second-data-det">
+                                    <div class="users userrevenue">
+                                        <div class="main-users">
+                                            <div class="userimg">
+                                                Users
+                                            </div>
+                                            <div class="username">
+                                                User Details
+                                            </div>
+                                            <div class="total">
+                                                Order Amount
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
-
-            <!-- revenue end -->
-            <!-- orders started -->
-
-            <div class="orders-container">
-                orders
-            </div>
-
-            <!-- orders end -->
-
-            <!-- calander started -->
-
-            <div class="calender-container">
-                calender
-            </div>
-
-            <!-- calender end -->
-
-            <!-- products started -->
-
-            <div class="products-container">
-                products
-            </div>
-            <!-- products end -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
-        <!-- side container end -->
+
+        <!-- revenue end -->
+        <!-- orders started -->
+
+        <div class="orders-container">
+            orders
+        </div>
+
+        <!-- orders end -->
+
+        <!-- calander started -->
+
+        <div class="calender-container">
+            calender
+        </div>
+
+        <!-- calender end -->
+
+        <!-- products started -->
+
+        <div class="products-container">
+            products
+        </div>
+        <!-- products end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- side container end -->
     </div>
     <!-- main container end -->
 
@@ -892,6 +1096,8 @@
 <script src="./js/analysis/products.js"></script>
 <script src="./js/analysis/users/users.js"></script>
 <script src="./js/analysis/users/usersdb.js"></script>
+<script src="./js/analysis/revenue/usersdata.js"></script>
+<script src="./js/analysis/revenue/analysisrevenue.js"></script>
 
 <!-- second data alltime details -->
 

@@ -109,6 +109,10 @@ db.ref('userorder/').get('value').then((snapshot) => {
     //  filter delivered
     var filterDeliveredCount = 0;
     var revenueDeliver = 0;
+    var Gst = 0;
+    var DeliveryCharge = 0;
+    var PlatformCharge = 0;
+    var productPrice = 0;
     const filterDeliverElement = document.getElementById('complete');
     const RevenueElement = document.getElementById('revenue');
     const filterDeliver = filterToday.filter((process, id) => process.datavalue.isOrderStatus === true);
@@ -139,10 +143,60 @@ db.ref('userorder/').get('value').then((snapshot) => {
     filterDeliver.forEach((price, id) => {
         const totalprice = price.datavalue.total.ToPay;
         revenueDeliver = revenueDeliver + totalprice;
+         Gst = Gst + price.datavalue.total.gstCalculation;
+        DeliveryCharge = DeliveryCharge + price.datavalue.total.deliveryCharge;
+        PlatformCharge = PlatformCharge + price.datavalue.total.platFormFee;
+        productPrice = productPrice + price.datavalue.total.itemPrice;
         deliverCart1(price)
 
     })
     RevenueElement.textContent = "Rs." + revenueDeliver;
+
+     // rwevenue progress bar]
+
+    const alltimeRevenue = document.getElementById('todayrevenue');
+    const alltimeproduct = document.getElementById('productprice');
+    const alltimegst = document.getElementById('gstbill');
+    const alltimeplatfee = document.getElementById('Platfromfee');
+    const alltimedeliver = document.getElementById('deliverycharges');
+
+    alltimeRevenue.textContent = "Rs." + revenueDeliver;
+    alltimeproduct.textContent = "Rs." + productPrice;
+    alltimegst.textContent = "Rs." + Math.floor(Gst);
+    alltimeplatfee.textContent = "Rs." + Math.floor(PlatformCharge);
+    alltimedeliver.textContent = "Rs." + Math.floor(DeliveryCharge);
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     const todeliverwidth = document.getElementById('todeliverwidth');
     const todeliverpercent = document.getElementById('todeliverpercent');
@@ -186,10 +240,16 @@ db.ref('userorder/').get('value').then((snapshot) => {
             const mainUsers = document.getElementsByClassName('main-users')[0];
          
             deliveredContainer3.appendChild(empty);
+                const deliveredContainer4 = document.getElementsByClassName('userrevenue')[0];
+          
+
+            const mainUsers1 = document.getElementsByClassName('main-users')[2];
+         
+            deliveredContainer4.appendChild(empty);
            
          
 
-            mainUsers.style.display = "none";
+            mainUsers1.style.display = "none";
            
 
         }

@@ -116,13 +116,35 @@ db.ref('userorder/').get('value').then((snapshot) => {
 
 
     var totalRevenue = 0;
+    var totalGst = 0;
+    var totalDeliveryCharge = 0;
+    var totalPlatformCharge = 0;
+    var totalproductPrice = 0;
 
     allTimeDeliver.forEach((data, id) => {
         totalRevenue = totalRevenue + data.datavalue.total.ToPay;
+        totalGst = totalGst + data.datavalue.total.gstCalculation;
+        totalDeliveryCharge = totalDeliveryCharge + data.datavalue.total.deliveryCharge;
+        totalPlatformCharge = totalPlatformCharge + data.datavalue.total.platFormFee;
+        totalproductPrice = totalproductPrice + data.datavalue.total.itemPrice;
 
     })
     const totalRevenueElement = document.getElementById('revenuealltime');
     totalRevenueElement.textContent = 'Rs.' + totalRevenue;
+
+
+    // rwevenue progress bar]
+
+    const alltimeRevenue = document.getElementById('alltime');
+    const alltimeproduct = document.getElementById('productpriceall');
+    const alltimegst = document.getElementById('allgstbill');
+    const alltimeplatfee = document.getElementById('allplatfromfee');
+    const alltimedeliver = document.getElementById('alldeliverycharges');
+    alltimeRevenue.textContent = 'Rs.' + totalRevenue;
+    alltimeproduct.textContent = 'Rs.' + totalproductPrice;
+    alltimegst.textContent = 'Rs.' + Math.floor(totalGst);
+    alltimeplatfee.textContent = 'Rs.' + Math.floor(totalPlatformCharge);
+    alltimedeliver.textContent = 'Rs.' + Math.floor(totalDeliveryCharge);
 
 
     const todeliverwidth = document.getElementById('todeliverwidth1');
