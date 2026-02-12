@@ -67,6 +67,8 @@
     .orders-container
     {
         margin-top: 10px;
+        background-color: #ecf0f1;
+        height: 100%;
     }
 }
 
