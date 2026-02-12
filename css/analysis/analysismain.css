@@ -29,13 +29,39 @@
         padding-left: 60px;
         height: auto;
     }
+     .userrevenue {
+        height: 1100px;
+        overflow-y: scroll;
+    }
+
+    .userrevenue::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    .userrevenue::-webkit-scrollbar-thumb {
+        background-color: #ff4343;
+        border-radius: 10px;
+    }
 }
 
 /* lg mobiles and sm tablets */
 @media only screen and (min-width:400px) and (max-width:767px) {
     .users-container {
-        padding-left: 60px;
+        padding-left: 50px;
         height: auto;
+    }
+     .userrevenue {
+        height: 1100px;
+        overflow-y: scroll;
+    }
+
+    .userrevenue::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    .revenue-container
+    {
+        padding-left: 50px;
     }
 }
 
@@ -45,6 +71,20 @@
         padding-left: 90px;
         height: auto;
     }
+     .userrevenue {
+        height: 1100px;
+        overflow-y: scroll;
+    }
+
+    .userrevenue::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    .userrevenue::-webkit-scrollbar-thumb {
+        background-color: #ff4343;
+        border-radius: 10px;
+    }
+
 }
 
 /* md laptops and sm desktops */

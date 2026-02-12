@@ -39,7 +39,6 @@ db.ref('userorder').get('value').then((snapchat) => {
 
 
 
-
     dateFilter.forEach((todaypro, index) => {
         todayOrder(todaypro, index, uniqArray)
 
