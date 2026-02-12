@@ -42,6 +42,10 @@
     {
         padding-left: 50px;
     }
+      .orders-container
+    {
+        padding-left: 50px;
+    }
 
 }
 
@@ -66,7 +70,7 @@
     }
     .orders-container
     {
-        padding-top: 10px;
+        padding-left: 50px;
     }
 }
 
@@ -86,6 +90,10 @@
     }
 
     .revenue-container
+    {
+        padding-left: 50px;
+    }
+      .orders-container
     {
         padding-left: 50px;
     }
@@ -148,7 +156,7 @@
         background-color: #ff4343;
         border-radius: 10px;
     }
-
+     
 
 
 
