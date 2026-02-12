@@ -38,10 +38,6 @@
         width: 2px;
     }
 
-    .userrevenue::-webkit-scrollbar-thumb {
-        background-color: #ff4343;
-        border-radius: 10px;
-    }
     .revenue-container
     {
         padding-left: 50px;
@@ -68,6 +64,10 @@
     {
         padding-left: 50px;
     }
+    .orders-container
+    {
+        margin-top: 10px;
+    }
 }
 
 /* md tablets and sm laptops */
@@ -85,10 +85,6 @@
         width: 2px;
     }
 
-    .userrevenue::-webkit-scrollbar-thumb {
-        background-color: #ff4343;
-        border-radius: 10px;
-    }
     .revenue-container
     {
         padding-left: 50px;

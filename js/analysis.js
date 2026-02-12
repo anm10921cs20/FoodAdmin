@@ -79,6 +79,39 @@ alltimeBtnRevenue.addEventListener('click', () => {
 })
 
 
+const todayBtnorders = document.getElementsByClassName('today-button')[2];
+const alltimeBtnorders = document.getElementsByClassName('alltime-button')[2];
+const todayContainerorders = document.getElementsByClassName('today-container')[2];
+const alltimeContainerorders = document.getElementsByClassName('alltime-container')[2];
+
+todayBtnorders.addEventListener('click', () => {
+  alltimeBtnorders.classList.remove('btns-active');
+  todayBtnorders.classList.add('btns-active');
+  todayContainerorders.style.display = "block";
+  alltimeContainerorders.style.display = "none";
+  let type = "success"
+  let icon = "fa-solid fa-circle-check";
+  let title = "Today";
+  let text = "All the Today orders Reports"
+
+  createToast(type, icon, title, text)
+
+})
+alltimeBtnorders.addEventListener('click', () => {
+  todayBtnorders.classList.remove('btns-active');
+  alltimeBtnorders.classList.add('btns-active');
+  todayContainerorders.style.display = "none";
+  alltimeContainerorders.style.display = "block"
+
+  let type = "success"
+  let icon = "fa-solid fa-circle-check";
+  let title = "All Time";
+  let text = "Alltime orders Reports Here"
+
+  createToast(type, icon, title, text)
+})
+
+
 
 
 
