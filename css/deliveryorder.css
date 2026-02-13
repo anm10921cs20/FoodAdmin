@@ -104,6 +104,13 @@
     .height {
         height: 100px;
     }
+     .no-orders
+    {
+        text-align: center;
+        font-size: 18px;
+        color: #555;
+        padding: 20px;
+    }
 
 }
 
@@ -205,6 +212,13 @@
 
     .height {
         height: 100px;
+    }
+    .no-orders
+    {
+        text-align: center;
+        font-size: 18px;
+        color: #555;
+        padding: 20px;
     }
 
 
@@ -324,6 +338,13 @@
     .height {
         height: 100px;
     }
+     .no-orders
+    {
+        text-align: center;
+        font-size: 18px;
+        color: #555;
+        padding: 20px;
+    }
 
 
 
@@ -428,6 +449,13 @@
     .height {
         height: 100px;
     }
+     .no-orders
+    {
+        text-align: center;
+        font-size: 18px;
+        color: #555;
+        padding: 20px;
+    }
 
 
 }
@@ -528,6 +556,13 @@
 
     .height {
         height: 100px;
+    }
+     .no-orders
+    {
+        text-align: center;
+        font-size: 18px;
+        color: #555;
+        padding: 20px;
     }
 
 

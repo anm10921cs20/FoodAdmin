@@ -48,28 +48,28 @@ db.ref('userorder').get('value').then((snap) => {
     })
 
     orderToday.forEach((item, index) => {
-        if (item.pushOrderData.date === new Date().toLocaleDateString()) {
+        if (item.pushOrderData.isOrderStatus === false) {
 
             function zeroAdd(data) {
                 return data <= 9 ? `0${data}` : data;
             }
 
             const orderTime = item.pushOrderData.time;
-   
-            
+
+
             const convertNormalTimeElement = parseInt(orderTime.slice(0, 3));
             const hours = zeroAdd(convertNormalTimeElement === 0 ? 12 : convertNormalTimeElement > 12 ? convertNormalTimeElement - 12 : convertNormalTimeElement);
-          
-            
+
+
             const minutes = zeroAdd(parseInt(orderTime.slice(3, 5)));
-           
-            
+
+
 
             const second = zeroAdd(parseInt(orderTime.slice(6, 8)))
             const median = convertNormalTimeElement < 12 ? "AM" : "PM";
 
-         
-            
+
+
 
 
 
@@ -140,27 +140,31 @@ db.ref('userorder').get('value').then((snap) => {
 
 
 
-                const readyToDeliver = document.querySelectorAll('.readytodeliver');
+            const readyToDeliver = document.querySelectorAll('.readytodeliver');
 
 
 
-                readyToDeliver.forEach((btns, id) => {
-                    btns.addEventListener('click', readytodeliver)
-                })
-
-
-
-
-
-
-
-           
+            readyToDeliver.forEach((btns, id) => {
+                btns.addEventListener('click', readytodeliver)
+            })
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+        }else
+        {
+            const todayDeliveryOrder = document.getElementsByClassName('today-delivery-order')[0];
+            todayDeliveryOrder.innerHTML = "<div class='no-orders'>No Orders Now</div>";
         }
 
     })
@@ -221,7 +225,7 @@ function readytodeliver(event) {
                 time: new Date().toLocaleTimeString(),
                 date: new Date().toLocaleDateString(),
             })
-             
+
             var button = event.target;
             button.remove();
 
@@ -229,9 +233,9 @@ function readytodeliver(event) {
         }
 
     })
-        setTimeout(() => {
+    setTimeout(() => {
         window.location.reload();
-    },1000)
+    }, 1000)
 
 
 }
@@ -313,6 +317,10 @@ get(ref(deliverydb, 'deliverypartnerorder/')).then((snap) => {
             todayDeliveryOrder.appendChild(div);
 
 
+        }else
+        {
+            const todayDeliveryOrder = document.getElementsByClassName('today-delivery-order')[0];
+            todayDeliveryOrder.innerHTML = "<div class='no-orders'>No Orders Now</div>";
         }
 
     })
@@ -325,5 +333,5 @@ get(ref(deliverydb, 'deliverypartnerorder/')).then((snap) => {
 
 
 setTimeout(() => {
-window.location.reload();
-},1200000)
+    window.location.reload();
+}, 1200000)
