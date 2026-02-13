@@ -139,8 +139,6 @@ const users = document.getElementsByClassName('nav-content')[1];
 const partners = document.getElementsByClassName('nav-content')[2];
 const revenue = document.getElementsByClassName('nav-content')[3];
 const orders = document.getElementsByClassName('nav-content')[4];
-const calender = document.getElementsByClassName('nav-content')[5];
-const products = document.getElementsByClassName('nav-content')[6];
 
 // container
 
@@ -149,8 +147,6 @@ const usersElement = document.getElementsByClassName('users-container')[0];
 const partnersElement = document.getElementsByClassName('partners-container')[0];
 const revenueElement = document.getElementsByClassName('revenue-container')[0];
 const ordersElement = document.getElementsByClassName('orders-container')[0];
-const calenderElement = document.getElementsByClassName('calender-container')[0];
-const productsElement = document.getElementsByClassName('products-container')[0];
 
 dashboard.style.backgroundColor = "#ff9900";
 dashboard.style.color = "#fff";
@@ -161,8 +157,7 @@ dashboard.addEventListener('click', () => {
   partnersElement.style.display = "none";
   revenueElement.style.display = "none";
   ordersElement.style.display = "none";
-  calenderElement.style.display = "none";
-  productsElement.style.display = "none";
+
 
   // background control
   dashboard.style.backgroundColor = "#ff9900";
@@ -190,15 +185,7 @@ dashboard.addEventListener('click', () => {
   orders.style.backgroundColor = transparent;
   orders.style.color = color;
 
-  // calender
 
-  calender.style.backgroundColor = transparent;
-  calender.style.color = color;
-
-  // products
-
-  products.style.backgroundColor = transparent;
-  products.style.color = color;
 
 
 
@@ -211,8 +198,7 @@ users.addEventListener('click', () => {
   partnersElement.style.display = "none";
   revenueElement.style.display = "none";
   ordersElement.style.display = "none";
-  calenderElement.style.display = "none";
-  productsElement.style.display = "none";
+
 
   const transparent = "transparent";
   const color = "#ff4343"
@@ -242,15 +228,7 @@ users.addEventListener('click', () => {
   orders.style.backgroundColor = transparent;
   orders.style.color = color;
 
-  // calender
 
-  calender.style.backgroundColor = transparent;
-  calender.style.color = color;
-
-  // products
-
-  products.style.backgroundColor = transparent;
-  products.style.color = color;
 
 
 
@@ -266,8 +244,7 @@ partners.addEventListener('click', () => {
   partnersElement.style.display = "block";
   revenueElement.style.display = "none";
   ordersElement.style.display = "none";
-  calenderElement.style.display = "none";
-  productsElement.style.display = "none";
+
 
   const transparent = "transparent";
   const color = "#ff4343"
@@ -297,15 +274,7 @@ partners.addEventListener('click', () => {
   orders.style.backgroundColor = transparent;
   orders.style.color = color;
 
-  // calender
-
-  calender.style.backgroundColor = transparent;
-  calender.style.color = color;
-
-  // products
-
-  products.style.backgroundColor = transparent;
-  products.style.color = color;
+ 
 
 
 
@@ -320,8 +289,7 @@ revenue.addEventListener('click', () => {
   partnersElement.style.display = "none";
   revenueElement.style.display = "block";
   ordersElement.style.display = "none";
-  calenderElement.style.display = "none";
-  productsElement.style.display = "none";
+
 
   const transparent = "transparent";
   const color = "#ff4343"
@@ -351,15 +319,7 @@ revenue.addEventListener('click', () => {
   orders.style.backgroundColor = transparent;
   orders.style.color = color;
 
-  // calender
-
-  calender.style.backgroundColor = transparent;
-  calender.style.color = color;
-
-  // products
-
-  products.style.backgroundColor = transparent;
-  products.style.color = color;
+ 
 
 
 
@@ -374,8 +334,7 @@ orders.addEventListener('click', () => {
   partnersElement.style.display = "none";
   revenueElement.style.display = "none";
   ordersElement.style.display = "block";
-  calenderElement.style.display = "none";
-  productsElement.style.display = "none";
+
 
   const transparent = "transparent";
   const color = "#ff4343"
@@ -405,15 +364,7 @@ orders.addEventListener('click', () => {
   orders.style.backgroundColor = "#ff9900";
   orders.style.color = "#fff";
 
-  // calender
-
-  calender.style.backgroundColor = transparent;
-  calender.style.color = color;
-
-  // products
-
-  products.style.backgroundColor = transparent;
-  products.style.color = color;
+ 
 
 
 
@@ -422,109 +373,3 @@ orders.addEventListener('click', () => {
 
 
 
-calender.addEventListener('click', () => {
-  // display control
-  dashboardElement.style.display = "none";
-  usersElement.style.display = "none";
-  partnersElement.style.display = "none";
-  revenueElement.style.display = "none";
-  ordersElement.style.display = "none";
-  calenderElement.style.display = "block";
-  productsElement.style.display = "none";
-
-  const transparent = "transparent";
-  const color = "#ff4343"
-
-  // background control
-  dashboard.style.backgroundColor = transparent;
-  dashboard.style.color = color;
-
-
-  // users
-
-  users.style.backgroundColor =transparent;
-  users.style.color = color;
-
-  // partners
-
-  partners.style.backgroundColor = transparent;
-  partners.style.color = color;
-
-  // revenue
-
-  revenue.style.backgroundColor =transparent;
-  revenue.style.color = color;
-
-  // orders
-
-  orders.style.backgroundColor = transparent;
-  orders.style.color = color;
-
-  // calender
-
-  calender.style.backgroundColor = "#ff9900";
-  calender.style.color = "#fff";
-
-  // products
-
-  products.style.backgroundColor = transparent;
-  products.style.color = color;
-
-
-
-})
-
-
-
-
-products.addEventListener('click', () => {
-  // display control
-  dashboardElement.style.display = "none";
-  usersElement.style.display = "none";
-  partnersElement.style.display = "none";
-  revenueElement.style.display = "none";
-  ordersElement.style.display = "none";
-  calenderElement.style.display = "none";
-  productsElement.style.display = "block";
-
-  const transparent = "transparent";
-  const color = "#ff4343"
-
-  // background control
-  dashboard.style.backgroundColor = transparent;
-  dashboard.style.color = color;
-
-
-  // users
-
-  users.style.backgroundColor =transparent;
-  users.style.color = color;
-
-  // partners
-
-  partners.style.backgroundColor = transparent;
-  partners.style.color = color;
-
-  // revenue
-
-  revenue.style.backgroundColor =transparent;
-  revenue.style.color = color;
-
-  // orders
-
-  orders.style.backgroundColor = transparent;
-  orders.style.color = color;
-
-  // calender
-
-  calender.style.backgroundColor = transparent;
-  calender.style.color = color;
-
-  // products
-
-  products.style.backgroundColor = "#ff9900";
-  products.style.color = "#fff";
-
-
-
-})

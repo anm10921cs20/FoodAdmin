@@ -93,6 +93,10 @@ db.ref('userorder/').get('value').then((snapshot) => {
     torderswidth.style.width = `${alltimeZero}%`;
     torderspercent.textContent = alltimeZero + '%';
 
+    const totalOrders = document.getElementById('totalorders');
+    totalOrders.textContent = alltimeZero;
+
+
 
 
 
@@ -102,6 +106,10 @@ db.ref('userorder/').get('value').then((snapshot) => {
     const completeAllTimeElement = document.getElementById('completealltime');
     const allTimeDeliverCountZero = alltimeDeliverCount <= 9 ? `0${alltimeDeliverCount}` : alltimeDeliverCount;
     completeAllTimeElement.textContent = allTimeDeliverCountZero;
+
+    const totalDeliver = document.getElementById('totaldelivers');
+    totalDeliver.textContent = allTimeDeliverCountZero;
+
 
 
 
@@ -113,6 +121,9 @@ db.ref('userorder/').get('value').then((snapshot) => {
     const processAllTimeCountZero = allTimeProcessCount <= 9 ? `0${allTimeProcessCount}` : allTimeProcessCount;
     processAllTimeElement.textContent = processAllTimeCountZero;
 
+    
+    const totalProcess = document.getElementById('proccessalltimes');
+    totalProcess.textContent = processAllTimeCountZero;
 
 
     var totalRevenue = 0;
@@ -184,6 +195,9 @@ db.ref('userorder/').get('value').then((snapshot) => {
     const proorderspercent = document.getElementById('proorderspercent1');
     proorderswidth.style.width = `${parseInt(productCountsTotalZero) / 5}%`;
     proorderspercent.textContent = parseInt(productCountsTotalZero) / 5 + '%';
+
+    const totalProducts = document.getElementById('totalproducts');
+    totalProducts.textContent = productCountsTotalZero;
 
     if (allTimeDeliver.length <= 0) {
 

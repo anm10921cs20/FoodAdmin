@@ -51,6 +51,9 @@ db.ref('userorder/').get('value').then((snapshot) => {
     todayOrder = filterToday.length;
     const orderValue = todayOrder <= 9 ? `0${todayOrder}` : todayOrder;
     todayOrders.textContent = orderValue;
+
+    const todayordersdata = document.getElementById('todayorderdata');
+    todayordersdata.textContent = orderValue;
     const torderswidth = document.getElementById('torderswidth');
     const torderspercent = document.getElementById('torderspercent');
 
@@ -70,6 +73,8 @@ db.ref('userorder/').get('value').then((snapshot) => {
     })
     const foodValue = foodCount <= 9 ? `0${foodCount}` : foodCount;
     productsOrder.textContent = foodValue;
+    const Prodtod = document.getElementById('Prodtod');
+    Prodtod.textContent = foodValue;
     const proorderswidth = document.getElementById('proorderswidth');
     const proorderspercent = document.getElementById('proorderspercent');
     proorderswidth.style.width = `${foodCount}%`;
@@ -85,7 +90,8 @@ db.ref('userorder/').get('value').then((snapshot) => {
     filterProcessCount = filterProcess.length;
     const processValue = filterProcessCount <= 9 ? `0${filterProcessCount}` : filterProcessCount;
     filterProcessElement.textContent = processValue;
-
+    const protod = document.getElementById('protod');
+    protod.textContent = processValue;
     
     
        if (filterProcess.length <= 0) {
@@ -121,6 +127,8 @@ db.ref('userorder/').get('value').then((snapshot) => {
 
     const DeliverValue = filterDeliveredCount <= 9 ? `0${filterDeliveredCount}` : filterDeliveredCount;
     filterDeliverElement.textContent = DeliverValue;
+    const toddel = document.getElementById('toddel');
+    toddel.textContent = DeliverValue;
 
 
     
