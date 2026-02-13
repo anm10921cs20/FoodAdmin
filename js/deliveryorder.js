@@ -121,7 +121,7 @@ db.ref('userorder').get('value').then((snap) => {
                 }
 
             }
-
+          
 
 
 
@@ -161,17 +161,18 @@ db.ref('userorder').get('value').then((snap) => {
 
 
 
-        }else
-        {
-            const todayDeliveryOrder = document.getElementsByClassName('today-delivery-order')[0];
-            todayDeliveryOrder.innerHTML = "<div class='no-orders'>No Orders Now</div>";
         }
+          
+
+
+
 
     })
 
 
 }).catch((err) => {
-    console.log(err);
+    const todayDeliveryOrder2 = document.getElementsByClassName('today-delivery-order')[0];
+    todayDeliveryOrder2.innerHTML = "<div class='no-orders'>Please Refresh Server Down</div>";
 
 });
 
@@ -317,17 +318,14 @@ get(ref(deliverydb, 'deliverypartnerorder/')).then((snap) => {
             todayDeliveryOrder.appendChild(div);
 
 
-        }else
-        {
-            const todayDeliveryOrder = document.getElementsByClassName('today-delivery-order')[0];
-            todayDeliveryOrder.innerHTML = "<div class='no-orders'>No Orders Now</div>";
         }
 
+      
     })
 
 }).catch((err) => {
-    console.log(err);
-
+    const todayDeliveryOrder11 = document.getElementsByClassName('today-delivered-order')[0];
+    todayDeliveryOrder11.innerHTML = "<div class='no-orders'>Please Refresh Server Down</div>";
 })
 
 
