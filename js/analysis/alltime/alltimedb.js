@@ -193,8 +193,8 @@ db.ref('userorder/').get('value').then((snapshot) => {
     productsCountTotalElements.textContent = productCountsTotalZero;
     const proorderswidth = document.getElementById('proorderswidth1');
     const proorderspercent = document.getElementById('proorderspercent1');
-    proorderswidth.style.width = `${parseInt(productCountsTotalZero) / 5}%`;
-    proorderspercent.textContent = parseInt(productCountsTotalZero) / 5 + '%';
+    proorderswidth.style.width = `${parseInt(productCountsTotalZero) / 25}%`;
+    proorderspercent.textContent = parseInt(productCountsTotalZero) / 25 + '%';
 
     const totalProducts = document.getElementById('totalproducts');
     totalProducts.textContent = productCountsTotalZero;
